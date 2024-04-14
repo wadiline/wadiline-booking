@@ -16,6 +16,10 @@ class BadLeg(WadilineError, ValueError):
     """A journey must travel forward between different stops."""
 
 
+class NoFare(WadilineError, LookupError):
+    """The requested leg has no fare."""
+
+
 @dataclass(frozen=True, slots=True)
 class Stop:
     code: str
