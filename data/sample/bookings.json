@@ -1,0 +1,22 @@
+[
+  {
+    "ref": "WL-58001",
+    "sold_at": "2024-09-14T07:00:00Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 37,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Donia Gabr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  }
+]
