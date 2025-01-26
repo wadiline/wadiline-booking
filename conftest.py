@@ -1,11 +1,12 @@
 import shutil
-from contextlib import closing
+from contextlib import closing, redirect_stderr, redirect_stdout
 from datetime import datetime, timedelta
+from io import StringIO
 
 import pytest
 from fastapi.testclient import TestClient
 
-from wadiline import api, db
+from wadiline import api, cli, db
 
 
 @pytest.fixture(scope="session")
@@ -64,3 +65,16 @@ def client(db_path, clock, monkeypatch):
     finally:
         app.dependency_overrides.clear()
         app.dependency_overrides.update(original)
+
+
+@pytest.fixture
+def run_cli(db_path):
+    def run(*args):
+        stdout, stderr = StringIO(), StringIO()
+        with redirect_stdout(stdout), redirect_stderr(stderr):
+            try:
+                code = cli.main(["--db", str(db_path), *args])
+            except SystemExit as error:
+                code = error.code
+        return code, stdout.getvalue(), stderr.getvalue()
+    return run

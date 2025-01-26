@@ -110,7 +110,7 @@ def seed(conn, data_dir=SAMPLE_DIR, *, force=False) -> dict[str, int]:
         migrate(conn)
         reserve_writer(conn)
         if conn.execute("SELECT 1 FROM trips LIMIT 1").fetchone() and not force:
-            raise SeedError("The database already has data. Use force=True to replace it.")
+            raise SeedError("The database already has data. Use --force to replace it.")
         data_dir = Path(data_dir)
         data = {name: json.loads((data_dir / f"{name}.json").read_bytes())
                 for name in ("stops", "routes", "fares", "trips", "bookings")}

@@ -29,7 +29,7 @@ def test_schema_is_safe_to_run_twice(tmp_path):
 def test_seed(tmp_path, conn, case):
     expected = {"stops": 2, "routes": 1, "trips": 2, "bookings": 1, "tickets": 1}
     if case == "refusal":
-        with pytest.raises(SeedError, match="Use force=True"):
+        with pytest.raises(SeedError, match="Use --force"):
             db.seed(conn)
     elif case == "force":
         with conn:

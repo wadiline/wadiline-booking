@@ -22,7 +22,7 @@ from wadiline.models import (
 from wadiline.money import format_egp
 from wadiline.seats import seat_free, seat_map
 
-app = FastAPI(title="Wadiline booking API", version="1.0.0")
+app = FastAPI(title="Wadiline booking API", version="1.1.0")
 
 
 def get_db():

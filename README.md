@@ -25,11 +25,13 @@ python3.12 -m venv .venv
 source .venv/bin/activate
 ```
 
+If you installed a newer version, replace `3.12` in the command that creates the virtual environment, for example `py -3.13` or `python3.13`.
+
 Install the package, load the sample and run the checks.
 
 ```text
 python -m pip install -e ".[dev]"
-python -c "from wadiline import db; path = db.db_path(); path.parent.mkdir(parents=True, exist_ok=True); conn = db.connect(path); db.seed(conn); conn.close()"
+python -m wadiline seed
 python -m pytest
 python -m ruff check .
 ```
