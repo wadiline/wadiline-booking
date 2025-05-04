@@ -3,6 +3,9 @@ from collections.abc import Mapping
 
 from wadiline.models import Leg, NoFare, PassengerType, Trip
 
+CHILD_UNDER_YEARS = 12
+STUDENT_PERCENT_OFF = 25
+
 
 def adult_fare(fares: Mapping[tuple[str, str], int], trip: Trip, leg: Leg) -> int:
     start = trip.stops[leg.board].stop.code
@@ -14,4 +17,8 @@ def adult_fare(fares: Mapping[tuple[str, str], int], trip: Trip, leg: Leg) -> in
 
 
 def price(adult_piastres: int, passenger_type: PassengerType) -> int:
+    if passenger_type == PassengerType.CHILD:
+        return adult_piastres // 2
+    if passenger_type == PassengerType.STUDENT:
+        return adult_piastres * (100 - STUDENT_PERCENT_OFF) // 100
     return adult_piastres

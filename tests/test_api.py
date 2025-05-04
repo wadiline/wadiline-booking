@@ -61,7 +61,7 @@ def test_map(client, conn, start, end, code, status, error):
     assert sorted(body["free"] + body["taken"]) == seats
 
 
-@pytest.mark.parametrize("case", ["body", "persistence", "adult", "repeat",
+@pytest.mark.parametrize("case", ["body", "persistence", "adult", "child", "student", "repeat",
                                  "missing-trip", "unknown-from", "unknown-to", "reverse",
                                  "seat-zero", "seat-50", "missing-passenger", "invalid-type"])
 def test_book(client, conn, clock, case):
@@ -91,7 +91,7 @@ def test_book(client, conn, clock, case):
     elif case == "invalid-type":
         body["passenger"]["type"] = "missing"
         failure = (422, "bad_request")
-    elif case == "adult":
+    elif case in ("adult", "child", "student"):
         body["passenger"]["type"] = case
     response = client.post(path, json=body)
     if failure:
@@ -111,7 +111,7 @@ def test_book(client, conn, clock, case):
         repeat = client.post(path, json=body)
         assert repeat.status_code == 409 and repeat.json()["detail"]["code"] == "seat_taken"
     else:
-        amount = adult
+        amount = {"adult": adult, "child": adult // 2, "student": adult * 3 // 4}[case]
         assert result["price_piastres"] == amount and result["price"] == f"{amount // 100} EGP"
 
 
