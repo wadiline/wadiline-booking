@@ -1,5 +1,5 @@
 """Seat checks. A ticket covers one leg, from the stop where its passenger boards to the stop
-where they get off. Stops are numbered along the route from 0."""
+where they get off. Stops are numbered along the route from 0; see docs/rules/seats.md."""
 
 from collections.abc import Iterable
 
