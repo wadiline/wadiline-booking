@@ -1,12 +1,15 @@
 """SQLite storage for routes, timetable and bookings."""
 import json
 import os
+import re
 import sqlite3
 from contextlib import contextmanager
 from datetime import UTC, date, datetime
+from importlib.resources import files
 from pathlib import Path
 
 from wadiline import fares
+from wadiline.clock import from_db_time, to_db_time
 from wadiline.models import (
     AlreadyCancelled,
     Booking,
@@ -74,35 +77,56 @@ def reserve_writer(conn):
     conn.execute("UPDATE meta SET value = value WHERE 0")
 
 
-SCHEMA = """
-CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
-CREATE TABLE stops (code TEXT PRIMARY KEY, name TEXT NOT NULL UNIQUE);
-CREATE TABLE routes (code TEXT PRIMARY KEY);
-CREATE TABLE route_stops (route_code TEXT NOT NULL REFERENCES routes(code), number INTEGER NOT NULL CHECK (number >= 0), stop_code TEXT NOT NULL REFERENCES stops(code), PRIMARY KEY (route_code, number), UNIQUE (route_code, stop_code));
-CREATE TABLE fares (route_code TEXT NOT NULL REFERENCES routes(code), from_code TEXT NOT NULL, to_code TEXT NOT NULL, adult_piastres INTEGER NOT NULL CHECK (adult_piastres > 0), PRIMARY KEY (route_code, from_code, to_code));
-CREATE TABLE trips (id INTEGER PRIMARY KEY, code TEXT NOT NULL, service_date TEXT NOT NULL, route_code TEXT NOT NULL REFERENCES routes(code), seats INTEGER NOT NULL CHECK (seats BETWEEN 1 AND 60), UNIQUE (code, service_date));
-CREATE TABLE trip_stops (trip_id INTEGER NOT NULL REFERENCES trips(id), number INTEGER NOT NULL, time TEXT NOT NULL, PRIMARY KEY (trip_id, number));
-CREATE TABLE bookings (ref TEXT PRIMARY KEY CHECK (ref GLOB 'WL-[0-9][0-9][0-9][0-9][0-9]'), sold_at TEXT NOT NULL, channel TEXT NOT NULL CHECK (channel IN ('web', 'app', 'counter')), email TEXT);
-CREATE TABLE tickets (id INTEGER PRIMARY KEY, booking_ref TEXT NOT NULL REFERENCES bookings(ref), trip_id INTEGER NOT NULL REFERENCES trips(id), seat INTEGER NOT NULL CHECK (seat >= 1), board INTEGER NOT NULL, alight INTEGER NOT NULL, passenger_name TEXT NOT NULL, passenger_type TEXT NOT NULL CHECK (passenger_type IN ('adult', 'child', 'student')), price_piastres INTEGER NOT NULL CHECK (price_piastres >= 0), status TEXT NOT NULL DEFAULT 'sold' CHECK (status IN ('sold', 'cancelled')), cancelled_at TEXT, refund_piastres INTEGER, CHECK (0 <= board AND board < alight));
-CREATE INDEX tickets_by_trip_seat ON tickets (trip_id, seat);
-"""
+def migration_statements(text):
+    start = 0
+    for match in re.finditer(";", text):
+        end = match.end()
+        if sqlite3.complete_statement(text[start:end]):
+            yield text[start:end]
+            start = end
+    tail = text[start:]
+    if tail:
+        yield tail
 
 
-def from_db_time(text):
-    return datetime.fromisoformat(text).astimezone(UTC)
+def migrate(conn, folder=None) -> list[str]:
+    conn.execute("CREATE TABLE IF NOT EXISTS schema_migrations (name TEXT PRIMARY KEY, applied_at TEXT NOT NULL)")
+    if folder is None:
+        folder = files("wadiline").joinpath("migrations")
+    candidates = sorted((p for p in folder.iterdir() if re.fullmatch(r"\d{4}_[a-z0-9_]+\.sql", p.name)),
+                        key=lambda p: p.name)
+    applied = []
+    refused = False
 
+    def authorize(action, _arg1, _arg2, _database, _trigger):
+        nonlocal refused
+        if action in (sqlite3.SQLITE_TRANSACTION, sqlite3.SQLITE_SAVEPOINT):
+            refused = True
+            return sqlite3.SQLITE_DENY
+        return sqlite3.SQLITE_OK
 
-def to_db_time(at):
-    if at.utcoffset() is None:
-        raise ValueError("A time must have a UTC offset.")
-    return at.astimezone(UTC).isoformat(timespec="seconds").replace("+00:00", "Z")
-
-
-def migrate(conn):
-    if not conn.execute("SELECT 1 FROM sqlite_master WHERE name='meta'").fetchone():
-        with savepoint(conn, "schema"):
-            for statement in SCHEMA.strip().splitlines():
-                conn.execute(statement)
+    for path in candidates:
+        with savepoint(conn, "migration"):
+            conn.execute("UPDATE schema_migrations SET name = name WHERE 0")
+            if conn.execute("SELECT 1 FROM schema_migrations WHERE name = ?", (path.name,)).fetchone():
+                continue
+            conn.set_authorizer(authorize)
+            try:
+                for statement in migration_statements(path.read_bytes().decode("utf-8")):
+                    conn.execute(statement)
+            except sqlite3.DatabaseError:
+                if refused:
+                    raise sqlite3.OperationalError(
+                        f"{path.name}: remove BEGIN, COMMIT, END, ROLLBACK, SAVEPOINT and RELEASE. "
+                        "Each migration already runs in its own transaction."
+                    ) from None
+                raise
+            finally:
+                conn.set_authorizer(None)
+            conn.execute("INSERT INTO schema_migrations VALUES (?, ?)",
+                         (path.name, to_db_time(datetime.now(UTC))))
+            applied.append(path.name)
+    return applied
 
 
 def seed(conn, data_dir=SAMPLE_DIR, *, force=False) -> dict[str, int]:

@@ -39,5 +39,6 @@ python -m ruff check .
 To try the API, run `python -m uvicorn wadiline.api:app --reload` and open
 `http://127.0.0.1:8000/docs`.
 
+- [Architecture](docs/architecture.md)
 - [HTTP API](docs/api.md)
 - [Rule book](docs/rules/README.md)

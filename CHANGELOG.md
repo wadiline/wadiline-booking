@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0 · 2026-03-08
+
+- Migrations and the API's clock.
+
 ## 1.3.0 · 2025-10-12
 
 - Rule-book tests.

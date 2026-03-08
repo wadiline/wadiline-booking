@@ -1,9 +1,8 @@
 """HTTP endpoints for the booking service."""
 import sqlite3
 from contextlib import closing
-from datetime import UTC, date, datetime
+from datetime import date
 from typing import Annotated
-from zoneinfo import ZoneInfo
 
 from fastapi import Depends, FastAPI, HTTPException, Query, Request
 from fastapi.exceptions import RequestValidationError
@@ -11,6 +10,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
 from wadiline import db
+from wadiline.clock import Clock, SystemClock, cairo
 from wadiline.models import (
     AlreadyCancelled,
     BadLeg,
@@ -22,7 +22,7 @@ from wadiline.models import (
 from wadiline.money import format_egp
 from wadiline.seats import seat_free, seat_map
 
-app = FastAPI(title="Wadiline booking API", version="1.3.0")
+app = FastAPI(title="Wadiline booking API", version="1.4.0")
 
 
 def get_db():
@@ -30,11 +30,12 @@ def get_db():
         yield conn
 
 
-def cairo(at):
-    return at.astimezone(ZoneInfo("Africa/Cairo"))
+def get_clock() -> Clock:
+    return SystemClock()
 
 
 Connection = Annotated[sqlite3.Connection, Depends(get_db)]
+RequestClock = Annotated[Clock, Depends(get_clock)]
 From = Annotated[str, Query(alias="from")]
 To = Annotated[str, Query(alias="to")]
 OptionalFrom = Annotated[str | None, Query(alias="from")]
@@ -121,7 +122,7 @@ def seats(trip_code: str, from_stop: From, to_stop: To, conn: Connection, date: 
 
 
 @app.post("/trips/{trip_code}/bookings", status_code=201)
-def book(trip_code: str, body: BookingBody, conn: Connection):
+def book(trip_code: str, body: BookingBody, conn: Connection, clock: RequestClock):
     with conn:
         db.reserve_writer(conn)
         trip = find_trip(conn, trip_code)
@@ -133,7 +134,7 @@ def book(trip_code: str, body: BookingBody, conn: Connection):
             raise error(409, "seat_taken", f"Seat {body.seat} is taken for part of {start} to {end}.")
         booking = db.create_booking(conn, trip, body.seat, leg, body.passenger.name,
                                     body.passenger.type, channel="counter", email=body.email,
-                                    now=datetime.now(UTC))
+                                    now=clock.now())
     return {"ref": booking.ref, **ticket_payload(trip, booking.tickets[0])}
 
 
@@ -156,10 +157,10 @@ def booking_details(ref: str, conn: Connection):
 
 
 @app.post("/bookings/{ref}/cancel")
-def cancel(ref: str, conn: Connection):
+def cancel(ref: str, conn: Connection, clock: RequestClock):
     try:
         with conn:
-            share, amount = db.cancel_booking(conn, ref, datetime.now(UTC))
+            share, amount = db.cancel_booking(conn, ref, clock.now())
     except BookingNotFound as exc:
         raise error(404, "booking_not_found", str(exc)) from exc
     except AlreadyCancelled as exc:

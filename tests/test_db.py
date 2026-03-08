@@ -3,6 +3,7 @@ import shutil
 import sqlite3
 from contextlib import closing
 from datetime import date, timedelta
+from pathlib import Path
 
 import pytest
 
@@ -17,12 +18,35 @@ from wadiline.models import (
 from wadiline.refunds import RefundShare
 
 
-def test_schema_is_safe_to_run_twice(tmp_path):
+@pytest.mark.parametrize("case", ["initial", "rerun", "discover", "rollback"])
+def test_migration(tmp_path, case):
+    folder = tmp_path / "migrations"
+    folder.mkdir()
+    packaged = Path(__file__).resolve().parents[1] / "src" / "wadiline" / "migrations"
+    first = ["0001_base.sql"]
+    for name in first:
+        shutil.copyfile(packaged / name, folder / name)
     with closing(db.connect(tmp_path / "test.db")) as conn:
-        db.migrate(conn)
-        db.migrate(conn)
-        assert conn.execute("SELECT count(*) FROM trips").fetchone()[0] == 0
-        assert conn.execute("PRAGMA foreign_keys").fetchone()[0] == 1
+        assert db.migrate(conn, folder) == first
+        if case == "initial":
+            assert [r[0] for r in conn.execute("SELECT name FROM schema_migrations ORDER BY rowid")] == first
+            assert conn.execute("PRAGMA foreign_keys").fetchone()[0] == 1
+            assert conn.execute("PRAGMA journal_mode").fetchone()[0] == "delete"
+        elif case == "rerun":
+            original = conn.execute("SELECT * FROM schema_migrations ORDER BY rowid").fetchall()
+            assert db.migrate(conn, folder) == []
+            assert conn.execute("SELECT * FROM schema_migrations ORDER BY rowid").fetchall() == original
+        elif case == "discover":
+            (folder / "1001_extra.sql").write_text("CREATE TABLE extra (id INTEGER);\n", encoding="utf-8")
+            (folder / "007_other.sql").write_text("not SQL", encoding="utf-8")
+            assert db.migrate(conn, folder) == ["1001_extra.sql"]
+            assert not conn.execute("SELECT * FROM extra").fetchall()
+        else:
+            (folder / "0003_extra.sql").write_text("CREATE TABLE extra (id INTEGER);\nNOT SQL;\n", encoding="utf-8")
+            with pytest.raises(sqlite3.OperationalError):
+                db.migrate(conn, folder)
+            assert not conn.execute("SELECT 1 FROM sqlite_master WHERE name='extra'").fetchone()
+            assert conn.execute("SELECT count(*) FROM schema_migrations").fetchone()[0] == len(first)
 
 
 @pytest.mark.parametrize("case", ["counts", "refusal", "force", "failed-replacement"])

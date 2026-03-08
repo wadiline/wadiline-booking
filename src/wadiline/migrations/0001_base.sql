@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS stops (code TEXT PRIMARY KEY, name TEXT NOT NULL UNIQUE);
+CREATE TABLE IF NOT EXISTS routes (code TEXT PRIMARY KEY);
+CREATE TABLE IF NOT EXISTS route_stops (route_code TEXT NOT NULL REFERENCES routes(code), number INTEGER NOT NULL CHECK (number >= 0), stop_code TEXT NOT NULL REFERENCES stops(code), PRIMARY KEY (route_code, number), UNIQUE (route_code, stop_code));
+CREATE TABLE IF NOT EXISTS fares (route_code TEXT NOT NULL REFERENCES routes(code), from_code TEXT NOT NULL, to_code TEXT NOT NULL, adult_piastres INTEGER NOT NULL CHECK (adult_piastres > 0), PRIMARY KEY (route_code, from_code, to_code));
+CREATE TABLE IF NOT EXISTS trips (id INTEGER PRIMARY KEY, code TEXT NOT NULL, service_date TEXT NOT NULL, route_code TEXT NOT NULL REFERENCES routes(code), seats INTEGER NOT NULL CHECK (seats BETWEEN 1 AND 60), UNIQUE (code, service_date));
+CREATE TABLE IF NOT EXISTS trip_stops (trip_id INTEGER NOT NULL REFERENCES trips(id), number INTEGER NOT NULL, time TEXT NOT NULL, PRIMARY KEY (trip_id, number));
+CREATE TABLE IF NOT EXISTS bookings (ref TEXT PRIMARY KEY CHECK (ref GLOB 'WL-[0-9][0-9][0-9][0-9][0-9]'), sold_at TEXT NOT NULL, channel TEXT NOT NULL CHECK (channel IN ('web', 'app', 'counter')), email TEXT);
+CREATE TABLE IF NOT EXISTS tickets (id INTEGER PRIMARY KEY, booking_ref TEXT NOT NULL REFERENCES bookings(ref), trip_id INTEGER NOT NULL REFERENCES trips(id), seat INTEGER NOT NULL CHECK (seat >= 1), board INTEGER NOT NULL, alight INTEGER NOT NULL, passenger_name TEXT NOT NULL, passenger_type TEXT NOT NULL CHECK (passenger_type IN ('adult', 'child', 'student')), price_piastres INTEGER NOT NULL CHECK (price_piastres >= 0), status TEXT NOT NULL DEFAULT 'sold' CHECK (status IN ('sold', 'cancelled')), cancelled_at TEXT, refund_piastres INTEGER, CHECK (0 <= board AND board < alight));
+CREATE INDEX IF NOT EXISTS tickets_by_trip_seat ON tickets (trip_id, seat);

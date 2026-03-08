@@ -1,12 +1,14 @@
 import shutil
 from contextlib import closing, redirect_stderr, redirect_stdout
-from datetime import datetime, timedelta
+from datetime import datetime
 from io import StringIO
 
 import pytest
 from fastapi.testclient import TestClient
 
-from wadiline import api, cli, db
+from wadiline import cli, db
+from wadiline.api import app, get_clock, get_db
+from wadiline.clock import FixedClock
 
 
 @pytest.fixture(scope="session")
@@ -32,33 +34,17 @@ def conn(db_path):
 
 @pytest.fixture
 def clock():
-    class TestClock:
-        at = datetime.fromisoformat("2024-09-15T09:00:00Z")
-
-        def now(self):
-            return self.at
-
-        def advance(self, **delta):
-            self.at += timedelta(**delta)
-
-    return TestClock()
+    return FixedClock(datetime.fromisoformat("2024-09-15T09:00:00Z"))
 
 
 @pytest.fixture
-def client(db_path, clock, monkeypatch):
+def client(db_path, clock):
     def database():
         with closing(db.connect(db_path)) as connection:
             yield connection
 
-    class RequestTime(datetime):
-        @classmethod
-        def now(cls, tz=None):
-            return clock.now().astimezone(tz)
-
-    monkeypatch.setattr(api, "datetime", RequestTime)
-    app = api.app
     original = app.dependency_overrides.copy()
-    app.dependency_overrides[api.get_db] = database
+    app.dependency_overrides.update({get_db: database, get_clock: lambda: clock})
     try:
         with TestClient(app, base_url="http://test.wadiline.example") as http:
             yield http
