@@ -1,3 +1,5 @@
+import json
+
 import pytest
 
 from wadiline import cli, db
@@ -75,6 +77,25 @@ def test_booking(run_cli):
     assert code == 0 and err == ""
     assert out.splitlines()[1].startswith("WL-58001  ")
     assert run_cli("booking", "WL-99999") == (3, "", "No booking WL-99999.\n")
+
+
+@pytest.mark.parametrize("case", ["three", "refused", "atomic"])
+def test_import_timetable(run_cli, conn, tmp_path, case):
+    path = tmp_path / "export.json"
+    rows = [{"code": code, "route": "ALEX", "service_date": "2024-09-16", "seats": 49,
+             "stops": [{"stop": "CAI", "time": "2024-09-16T07:00:00+03:00"},
+                       {"stop": "ALX", "time": "2024-09-16T10:00:00+03:00"}]}
+            for code in ("NEW-1", "NEW-2", "NEW-3")]
+    if case != "three":
+        rows[0 if case == "refused" else -1]["route"] = "UNKNOWN"
+    path.write_text(json.dumps(rows), encoding="utf-8")
+    status, out, err = run_cli("import-timetable", str(path))
+    if case == "three":
+        assert (status, out, err) == (0, f"Imported 3 trips from {path}.\n", "")
+        assert len(db.list_trips(conn, service_date="2024-09-16")) == 3
+    else:
+        assert status == 1 and out == "" and err.startswith("Import stopped: ")
+        assert not db.list_trips(conn, service_date="2024-09-16")
 
 
 @pytest.mark.parametrize("case", ["argparse", "missing-db", "unseeded-db"])

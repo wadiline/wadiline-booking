@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wadiline-booking"
-version = "1.4.0"
+version = "1.5.0"
 description = "Wadiline's booking service: trips, seats, fares, refunds and the booking API."
 readme = "README.md"
 license = "MIT"

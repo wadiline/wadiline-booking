@@ -11,7 +11,7 @@ commands show times in Cairo and money in EGP.
 | `seats` | Whether two legs share road and which seats can sell |
 | `fares`, `refunds`, `money` | Prices, refund shares and EGP display |
 | `clock` | Current time for callers and fixed time for tests |
-| `db` | SQLite storage and migrations |
+| `db`, `timetable` | SQLite storage, migrations and timetable import |
 | `api`, `cli` | HTTP and station commands |
 
 

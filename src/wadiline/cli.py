@@ -6,10 +6,10 @@ from contextlib import closing
 from datetime import date
 from itertools import groupby
 from pathlib import Path
-from zoneinfo import ZoneInfo
 
-from wadiline import db
-from wadiline.models import BookingNotFound, SeedError, TripNotFound
+from wadiline import db, timetable
+from wadiline.clock import cairo
+from wadiline.models import BookingNotFound, SeedError, TimetableError, TripNotFound
 from wadiline.money import format_egp
 from wadiline.seats import seat_free, seat_map
 
@@ -17,7 +17,7 @@ MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
 
 
 def local_time(value):
-    stamp = value.astimezone(ZoneInfo("Africa/Cairo"))
+    stamp = cairo(value)
     return f"{stamp.day} {MONTHS[stamp.month - 1]} {stamp:%H:%M}"
 
 
@@ -86,6 +86,11 @@ def show_booking(conn, args):
         print(ticket_line(db.trip_by_id(conn, ticket.trip_id), ticket))
 
 
+def import_timetable(conn, args):
+    count = timetable.import_trips(conn, timetable.load_export(args.path))
+    print(f"Imported {count} {'trip' if count == 1 else 'trips'} from {args.path}.")
+
+
 def parser():
     result = argparse.ArgumentParser(prog="python -m wadiline")
     result.add_argument("--db", metavar="PATH")
@@ -104,6 +109,7 @@ def parser():
         command.add_argument("--seat", type=int)
         command.add_argument("--date", type=date.fromisoformat)
     commands.add_parser("booking").add_argument("ref")
+    commands.add_parser("import-timetable").add_argument("path")
     return result
 
 
@@ -129,8 +135,11 @@ def main(argv: list[str] | None = None) -> int:
                 print("The database is not seeded. Run seed first.", file=sys.stderr)
                 return 4
             command = {"trips": show_trips, "seats": show_seats, "tickets": show_tickets,
-                       "booking": show_booking}
+                       "booking": show_booking, "import-timetable": import_timetable}
             command[args.command](conn, args)
+    except TimetableError as exc:
+        print(f"Import stopped: {exc}", file=sys.stderr)
+        return 1
     except (TripNotFound, BookingNotFound) as exc:
         print(exc, file=sys.stderr)
         return 3

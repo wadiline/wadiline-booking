@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.0 · 2026-06-21
+
+- Timetable import.
+
 ## 1.4.0 · 2026-03-08
 
 - Migrations and the API's clock.

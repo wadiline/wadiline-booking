@@ -130,6 +130,8 @@ def migrate(conn, folder=None) -> list[str]:
 
 
 def seed(conn, data_dir=SAMPLE_DIR, *, force=False) -> dict[str, int]:
+    from wadiline.timetable import import_trips
+
     with sample_transaction(conn):
         migrate(conn)
         reserve_writer(conn)
@@ -147,15 +149,7 @@ def seed(conn, data_dir=SAMPLE_DIR, *, force=False) -> dict[str, int]:
             conn.executemany("INSERT INTO route_stops VALUES (?, ?, ?)",
                              ((route["code"], n, stop) for n, stop in enumerate(route["stops"])))
         conn.executemany("INSERT INTO fares VALUES (:route, :from, :to, :adult_piastres)", data["fares"])
-        for record in data["trips"]:
-            trip_id = conn.execute(
-                "INSERT INTO trips (code, service_date, route_code, seats) VALUES (?, ?, ?, ?)",
-                (record["code"], record["service_date"], record["route"], record["seats"]),
-            ).lastrowid
-            conn.executemany("INSERT INTO trip_stops VALUES (?, ?, ?)", (
-                (trip_id, i, to_db_time(datetime.fromisoformat(stop["time"])))
-                for i, stop in enumerate(record["stops"])
-            ))
+        import_trips(conn, data["trips"])
         conn.executemany("INSERT INTO meta VALUES (?, ?)", (
             ("as_of", "2024-09-15T09:00:00Z"), ("service_date", SERVICE_DATE), ("sample_version", "1")))
         trips = {trip.code: trip for trip in list_trips(conn)}

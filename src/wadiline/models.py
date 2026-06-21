@@ -36,6 +36,10 @@ class AlreadyCancelled(WadilineError):
     """Every ticket on the booking has already been cancelled."""
 
 
+class TimetableError(WadilineError):
+    """A timetable export cannot be imported."""
+
+
 @dataclass(frozen=True, slots=True)
 class Stop:
     code: str
