@@ -21,7 +21,7 @@ where = ["src"]
 wadiline = ["migrations/*.sql"]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "learner_tests"]
 addopts = "-ra"
 
 [tool.ruff]

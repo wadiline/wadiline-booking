@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Personal tests folder (BK-56).
+
 ## 1.5.0 · 2026-06-21
 
 - Timetable import.
