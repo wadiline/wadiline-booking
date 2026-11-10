@@ -58,7 +58,7 @@ def test_map(client, conn, start, end, code, status, error):
                 "to": trip.stop_name(leg.alight),
                 "free": [seat for seat in seats if seat not in taken], "taken": taken}
     assert {key: body[key] for key in expected} == expected
-    assert sorted(body["free"] + body["taken"]) == seats
+    assert sorted(body["free"] + body["taken"] + body.get("held", [])) == seats
 
 
 @pytest.mark.parametrize("case", ["body", "persistence", "adult", "child", "student", "repeat",

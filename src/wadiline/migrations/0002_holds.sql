@@ -1,0 +1,2 @@
+CREATE TABLE holds (id INTEGER PRIMARY KEY, trip_id INTEGER NOT NULL REFERENCES trips(id), seat INTEGER NOT NULL CHECK (seat >= 1), board INTEGER NOT NULL, alight INTEGER NOT NULL, holder TEXT NOT NULL CHECK (length(holder) BETWEEN 1 AND 64), created_at TEXT NOT NULL, expires_at TEXT NOT NULL, released_at TEXT, CHECK (0 <= board AND board < alight));
+CREATE INDEX holds_by_trip_seat ON holds (trip_id, seat);

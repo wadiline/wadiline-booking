@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from wadiline import db, fares, refunds
+from wadiline import db, fares, holds, refunds
 
 RULES = Path(__file__).resolve().parents[1] / "docs" / "rules"
 PASSAGES = [
@@ -17,10 +17,15 @@ PASSAGES = [
     ('refunds.md', 'A cancelled ticket is refunded in full up to 24 hours before departure, half up to 3 hours before, and nothing after.'),
     ('refunds.md', 'Departure is the timetabled time at the stop where the passenger boards.'),
     ('refunds.md', 'At exactly 24 hours before departure the refund is still in full, and at exactly 3 hours before it is still half.'),
+    ('holds.md', 'While a passenger pays in the app, their seat is held for 10 minutes. At 10 minutes the hold ends and the seat is free again.'),
+    ('holds.md', 'A hold covers one leg, like a ticket. A held seat cannot be sold, or held again, for any part of that leg. Legs that only meet at a stop do not clash.'),
+    ('holds.md', 'A passenger who asks again for the same seat and leg keeps the same hold. The 10 minutes do not start again.'),
+    ('holds.md', 'Only the passenger who holds a seat can let it go early.'),
+    ('notices/README.md', 'Dated notices from Operations. Each one says from when it applies and what it changes.'),
 ]
 
 
-@pytest.mark.parametrize(("file", "sentence"), PASSAGES, ids=[f"rule-{i:02d}" for i in range(1, 12)])
+@pytest.mark.parametrize(("file", "sentence"), PASSAGES, ids=[f"rule-{i:02d}" for i in range(1, 17)])
 def test_rule_passage(file, sentence):
     assert sentence in (RULES / file).read_text(encoding="utf-8")
 
@@ -42,7 +47,8 @@ def test_fare_table_matches(conn):
     (fares, "STUDENT_PERCENT_OFF", "fares.md", "25% off"),
     (refunds, "FULL_REFUND_HOURS", "refunds.md", "24 hours"),
     (refunds, "HALF_REFUND_HOURS", "refunds.md", "3 hours"),
-], ids=["child", "student", "full", "half"])
+    (holds, "HOLD_MINUTES", "holds.md", "10 minutes"),
+], ids=["child", "student", "full", "half", "hold"])
 def test_rule_number(module, constant, file, spoken):
     number = int("".join(c for c in spoken if c.isdecimal()))
     assert getattr(module, constant) == number

@@ -24,3 +24,33 @@ The service checks availability and saves the sale in one transaction. If the se
 already sold on part of the leg, it returns a 409 with a message such as
 `Seat 14 is taken for part of Cairo to Alexandria.` A cancellation uses the current clock
 time and each ticket's timetabled departure.
+
+## Holds (BK-63, not built yet)
+
+Send `POST /trips/{trip_code}/holds`. For example, send this body for ALX-1500.
+
+```json
+{"seat": 45, "from": "Cairo", "to": "Alexandria", "holder": "app-7f3a"}
+```
+
+A new hold returns 201. It takes the next ID SQLite assigns, so the first hold in an
+empty table is `H-000001`.
+
+```json
+{"hold_id": "H-000001", "trip": "ALX-1500", "date": "2024-09-15", "seat": 45, "from": "Cairo", "to": "Alexandria", "expires_at": "2024-09-15T12:10:00+03:00"}
+```
+
+The same holder, seat and leg return 200 and the same body while the hold is active.
+A sold seat returns 409 `seat_taken`. An active hold that shares road returns 409
+`seat_held`. An unknown trip returns 404 `trip_not_found`. A bad stop, a seat that is
+not on the bus, or a holder outside 1 to 64 characters returns 422 `bad_request`.
+
+Send `POST /holds/{hold_id}/release` with `{"holder": "app-7f3a"}`. The holder gets an
+empty 204, even if the hold has ended or was released. An unknown ID or another holder
+gets 404 `hold_not_found`. Use the hold ID exactly as it was issued.
+A hold ID in any other form is unknown: 404 `hold_not_found`.
+
+The seat map gains `"held": [...]` for seats with an active hold sharing road and no
+such sold ticket. Each seat appears in exactly one of `free`, `taken` and `held`.
+A counter sale gets 409 `seat_held` while that hold shares road, for example
+`Seat 45 is held for part of Cairo to Alexandria.`

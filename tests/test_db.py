@@ -23,7 +23,7 @@ def test_migration(tmp_path, case):
     folder = tmp_path / "migrations"
     folder.mkdir()
     packaged = Path(__file__).resolve().parents[1] / "src" / "wadiline" / "migrations"
-    first = ["0001_base.sql"]
+    first = ["0001_base.sql", "0002_holds.sql"]
     for name in first:
         shutil.copyfile(packaged / name, folder / name)
     with closing(db.connect(tmp_path / "test.db")) as conn:
@@ -56,9 +56,14 @@ def test_seed(tmp_path, conn, case):
         with pytest.raises(SeedError, match="Use --force"):
             db.seed(conn)
     elif case == "force":
+        trip = db.get_trip(conn, "ALX-0700")
+        leg = trip.leg("CAI", "ALX")
         with conn:
-            conn.execute("DELETE FROM tickets")
+            conn.execute("INSERT INTO holds VALUES (1, ?, 45, ?, ?, 'app', ?, ?, NULL)",
+                         (trip.id, leg.board, leg.alight, "2024-09-15T09:00:00Z",
+                          "2024-09-15T09:10:00Z"))
         assert db.seed(conn, force=True) == expected
+        assert conn.execute("SELECT count(*) FROM holds").fetchone()[0] == 0
         assert conn.execute("SELECT count(*) FROM tickets").fetchone()[0] == expected["tickets"]
     elif case == "failed-replacement":
         folder = tmp_path / "bad"

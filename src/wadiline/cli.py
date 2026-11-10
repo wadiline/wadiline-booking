@@ -80,10 +80,11 @@ def show_tickets(conn, args):
 
 def show_booking(conn, args):
     booking = db.get_booking(conn, args.ref)
+    lines = [ticket_line(db.trip_by_id(conn, ticket.trip_id), ticket) for ticket in booking.tickets]
     print(f"{booking.ref}  sold {local_time(booking.sold_at)}  {booking.channel}  "
           f"{format_egp(booking.total_piastres)}")
-    for ticket in booking.tickets:
-        print(ticket_line(db.trip_by_id(conn, ticket.trip_id), ticket))
+    for line in lines:
+        print(line)
 
 
 def import_timetable(conn, args):
@@ -130,8 +131,12 @@ def main(argv: list[str] | None = None) -> int:
             return 4
         with closing(db.connect(path)) as conn:
             try:
+                if not conn.execute(
+                    "SELECT 1 FROM sqlite_master WHERE type IN ('table', 'view') AND name = 'meta' COLLATE NOCASE"
+                ).fetchone():
+                    raise LookupError("No meta table.")
                 db.meta(conn, "service_date")
-            except (sqlite3.OperationalError, LookupError):
+            except LookupError:
                 print("The database is not seeded. Run seed first.", file=sys.stderr)
                 return 4
             command = {"trips": show_trips, "seats": show_seats, "tickets": show_tickets,
@@ -146,4 +151,7 @@ def main(argv: list[str] | None = None) -> int:
     except (ValueError, SeedError) as exc:
         print(exc, file=sys.stderr)
         return 2
+    except (sqlite3.OperationalError, sqlite3.IntegrityError) as exc:
+        print(exc, file=sys.stderr)
+        return 1
     return 0

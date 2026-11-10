@@ -140,7 +140,7 @@ def seed(conn, data_dir=SAMPLE_DIR, *, force=False) -> dict[str, int]:
         data_dir = Path(data_dir)
         data = {name: json.loads((data_dir / f"{name}.json").read_bytes())
                 for name in ("stops", "routes", "fares", "trips", "bookings")}
-        for table in ("tickets", "bookings", "trip_stops", "trips", "fares",
+        for table in ("holds", "tickets", "bookings", "trip_stops", "trips", "fares",
                       "route_stops", "routes", "stops", "meta"):
             conn.execute(f"DELETE FROM {table}")
         conn.executemany("INSERT INTO stops VALUES (:code, :name)", data["stops"])

@@ -13,6 +13,6 @@ commands show times in Cairo and money in EGP.
 | `clock` | Current time for callers and fixed time for tests |
 | `db`, `timetable` | SQLite storage, migrations and timetable import |
 | `api`, `cli` | HTTP and station commands |
-
+| `holds` | Seat-hold records for BK-63 |
 
 Rules that need the time receive `now` from their caller. They never read the clock.
