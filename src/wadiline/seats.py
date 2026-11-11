@@ -8,10 +8,10 @@ from wadiline.models import Leg, Ticket, Trip
 
 def legs_overlap(a: Leg, b: Leg) -> bool:
     """True when the two legs share any part of the road. Legs that only meet at a stop do not."""
-    return a.board < b.alight and b.board < a.alight
+    return a.board in b.on_board
 
 
-def seat_free(trip: Trip, tickets: Iterable[Ticket], seat: int, leg: Leg) -> bool:
+def seat_is_free(trip: Trip, tickets: Iterable[Ticket], seat: int, leg: Leg) -> bool:
     """True when `seat` can be sold for `leg`: no sold ticket on that seat shares road with it."""
     if not 1 <= seat <= trip.seats:
         raise ValueError(f"Seat {seat} is not on {trip.code}.")
@@ -25,4 +25,4 @@ def seat_free(trip: Trip, tickets: Iterable[Ticket], seat: int, leg: Leg) -> boo
 def seat_map(trip: Trip, tickets: Iterable[Ticket], leg: Leg) -> dict[int, bool]:
     """Every seat on the trip, in order, mapped to True when it is free for `leg`."""
     tickets = list(tickets)
-    return {seat: seat_free(trip, tickets, seat, leg) for seat in range(1, trip.seats + 1)}
+    return {seat: seat_is_free(trip, tickets, seat, leg) for seat in range(1, trip.seats + 1)}

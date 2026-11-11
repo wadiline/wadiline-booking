@@ -20,7 +20,7 @@ from wadiline.models import (
     UnknownStop,
 )
 from wadiline.money import format_egp
-from wadiline.seats import seat_free, seat_map
+from wadiline.seats import seat_is_free, seat_map
 
 app = FastAPI(title="Wadiline booking API", version="1.5.0")
 
@@ -129,7 +129,7 @@ def book(trip_code: str, body: BookingBody, conn: Connection, clock: RequestCloc
         leg = find_leg(trip, body.from_stop, body.to_stop)
         if not 1 <= body.seat <= trip.seats:
             raise error(422, "bad_request", f"Seat {body.seat} is not on {trip.code}.")
-        if not seat_free(trip, db.live_tickets(conn, trip), body.seat, leg):
+        if not seat_is_free(trip, db.live_tickets(conn, trip), body.seat, leg):
             start, end = trip.stop_name(leg.board), trip.stop_name(leg.alight)
             raise error(409, "seat_taken", f"Seat {body.seat} is taken for part of {start} to {end}.")
         booking = db.create_booking(conn, trip, body.seat, leg, body.passenger.name,

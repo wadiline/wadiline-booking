@@ -55,6 +55,11 @@ class Leg:
         if not 0 <= self.board < self.alight:
             raise BadLeg("A leg must travel forward between different stops.")
 
+    @property
+    def on_board(self) -> range:
+        """The stops where the passenger is on the bus, from boarding up to getting off."""
+        return range(self.board, self.alight)
+
 
 @dataclass(frozen=True, slots=True)
 class TripStop:

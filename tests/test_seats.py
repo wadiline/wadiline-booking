@@ -4,7 +4,7 @@ from datetime import UTC, date, datetime, timedelta
 import pytest
 
 from wadiline.models import Leg, PassengerType, Stop, Ticket, Trip, TripStop
-from wadiline.seats import seat_free, seat_map
+from wadiline.seats import seat_is_free, seat_map
 
 
 @pytest.fixture
@@ -27,25 +27,25 @@ def sold(trip, leg):
     ((0, 3), (0, 3), True), ((0, 1), (2, 3), False), ((2, 3), (0, 1), False),
 ], ids="A1 A2 A3 B1 B2 B3 C1 C2 C3 D1 E1 E2".split())
 def test_seat_case(trip, old, new, clash):
-    assert seat_free(trip, [sold(trip, Leg(*old))], 5, Leg(*new)) is not clash
+    assert seat_is_free(trip, [sold(trip, Leg(*old))], 5, Leg(*new)) is not clash
 
 
 @pytest.mark.parametrize("seat", [-1, 0, 50, 99])
 def test_invalid_seat(trip, seat):
     with pytest.raises(ValueError, match=f"Seat {seat} is not on TST-0100."):
-        seat_free(trip, [], seat, Leg(0, 1))
+        seat_is_free(trip, [], seat, Leg(0, 1))
 
 
 @pytest.mark.parametrize("seat", [1, 49])
 def test_valid_edge(trip, seat):
-    assert seat_free(trip, [], seat, Leg(0, 1))
+    assert seat_is_free(trip, [], seat, Leg(0, 1))
 
 
 @pytest.mark.parametrize("override", [{"status": "cancelled"}, {"seat": 6}, {"trip_id": 2}],
                          ids=["cancelled", "other-seat", "other-trip"])
 def test_ignored_ticket(trip, override):
     leg = Leg(0, 2)
-    assert seat_free(trip, [replace(sold(trip, leg), **override)], 5, leg)
+    assert seat_is_free(trip, [replace(sold(trip, leg), **override)], 5, leg)
 
 
 @pytest.mark.parametrize("part", ["order", "size", "free", "taken"])
@@ -66,10 +66,10 @@ def test_map_contract(trip, part):
 def test_ticket_input(trip, kind):
     leg = Leg(0, 1)
     records = [] if kind == "empty" else iter([sold(trip, leg)])
-    assert seat_free(trip, records, 5, leg) is (kind == "empty")
+    assert seat_is_free(trip, records, 5, leg) is (kind == "empty")
 
 
 @pytest.mark.parametrize(("old_end", "new_end"), [(2, 2), (1, 2), (2, 1)],
                          ids=["equal", "old-shorter", "new-shorter"])
 def test_same_board(trip, old_end, new_end):
-    assert seat_free(trip, [sold(trip, Leg(0, old_end))], 5, Leg(0, new_end)) is False
+    assert seat_is_free(trip, [sold(trip, Leg(0, old_end))], 5, Leg(0, new_end)) is False

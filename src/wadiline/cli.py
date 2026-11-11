@@ -11,7 +11,7 @@ from wadiline import db, timetable
 from wadiline.clock import cairo
 from wadiline.models import BookingNotFound, SeedError, TimetableError, TripNotFound
 from wadiline.money import format_egp
-from wadiline.seats import seat_free, seat_map
+from wadiline.seats import seat_is_free, seat_map
 
 MONTHS = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
 
@@ -47,7 +47,7 @@ def show_seats(conn, args):
     tickets = db.live_tickets(conn, trip)
     route = f"{trip.stop_name(leg.board)} -> {trip.stop_name(leg.alight)}"
     if args.seat is not None:
-        free = seat_free(trip, tickets, args.seat, leg)
+        free = seat_is_free(trip, tickets, args.seat, leg)
         print(f"Seat {args.seat} is {'free' if free else 'taken'} for {route}.")
         return
     slots = seat_map(trip, tickets, leg)

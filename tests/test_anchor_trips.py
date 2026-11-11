@@ -4,7 +4,7 @@ import pytest
 
 from wadiline import db
 from wadiline.models import Leg
-from wadiline.seats import seat_free
+from wadiline.seats import seat_is_free
 
 ROSTER = [
     ("WL-58117", "Ali Badawi", 22, Leg(0, 2), "adult", 78000, "web", "2026-11-02T09:05:00Z"),
@@ -64,10 +64,10 @@ def test_night_layout(conn, case):
 
 def test_seat_14_is_taken_from_cairo_to_aswan(conn):
     trip = db.get_trip(conn, "ASW-2200")
-    assert seat_free(trip, db.live_tickets(conn, trip), 14, trip.leg("Cairo", "Aswan")) is False
+    assert seat_is_free(trip, db.live_tickets(conn, trip), 14, trip.leg("Cairo", "Aswan")) is False
 
 
 def test_seat_22_sells_again_from_luxor(conn):
     trip = db.get_trip(conn, "ASW-2200")
     ali = db.get_booking(conn, "WL-58117").tickets[0]
-    assert seat_free(trip, [ali], 22, trip.leg("Luxor", "Aswan")) is True
+    assert seat_is_free(trip, [ali], 22, trip.leg("Luxor", "Aswan")) is True
