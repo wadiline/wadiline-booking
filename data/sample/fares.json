@@ -4,5 +4,59 @@
     "from": "CAI",
     "to": "ALX",
     "adult_piastres": 26000
+  },
+  {
+    "route": "HURG",
+    "from": "CAI",
+    "to": "HRG",
+    "adult_piastres": 64000
+  },
+  {
+    "route": "SINAI",
+    "from": "CAI",
+    "to": "SSH",
+    "adult_piastres": 72000
+  },
+  {
+    "route": "REDSEA",
+    "from": "HRG",
+    "to": "LXR",
+    "adult_piastres": 32000
+  },
+  {
+    "route": "UPPER",
+    "from": "CAI",
+    "to": "AST",
+    "adult_piastres": 42000
+  },
+  {
+    "route": "UPPER",
+    "from": "CAI",
+    "to": "LXR",
+    "adult_piastres": 78000
+  },
+  {
+    "route": "UPPER",
+    "from": "CAI",
+    "to": "ASW",
+    "adult_piastres": 92000
+  },
+  {
+    "route": "UPPER",
+    "from": "AST",
+    "to": "LXR",
+    "adult_piastres": 38000
+  },
+  {
+    "route": "UPPER",
+    "from": "AST",
+    "to": "ASW",
+    "adult_piastres": 56000
+  },
+  {
+    "route": "UPPER",
+    "from": "LXR",
+    "to": "ASW",
+    "adult_piastres": 24000
   }
 ]

@@ -34,7 +34,7 @@ def conn(db_path):
 
 @pytest.fixture
 def clock():
-    return FixedClock(datetime.fromisoformat("2024-09-15T09:00:00Z"))
+    return FixedClock(datetime.fromisoformat("2026-11-11T10:00:00Z"))
 
 
 @pytest.fixture

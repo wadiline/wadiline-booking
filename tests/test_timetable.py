@@ -6,10 +6,10 @@ from wadiline import db, timetable
 from wadiline.models import TimetableError, TripNotFound
 
 
-def record(code="TEST-0700", date="2024-09-16"):
+def record(code="TEST-0700", date="2026-11-12"):
     return {"code": code, "route": "ALEX", "service_date": date, "seats": 49,
-            "stops": [{"stop": "CAI", "time": f"{date}T07:00:00+03:00"},
-                      {"stop": "ALX", "time": f"{date}T10:00:00+03:00"}]}
+            "stops": [{"stop": "CAI", "time": f"{date}T07:00:00+02:00"},
+                      {"stop": "ALX", "time": f"{date}T10:00:00+02:00"}]}
 
 
 @pytest.mark.parametrize("case", ["load-file", "insert", "same-code-new-date"])
@@ -21,8 +21,8 @@ def test_good_export(conn, tmp_path, case):
         assert timetable.load_export(path) == [row]
     else:
         assert timetable.import_trips(conn, [row]) == 1
-        assert [t.code for t in db.list_trips(conn, service_date="2024-09-16")] == [row["code"]]
-        assert len(db.list_trips(conn)) == 2
+        assert [t.code for t in db.list_trips(conn, service_date="2026-11-12")] == [row["code"]]
+        assert len(db.list_trips(conn)) == 8
 
 
 @pytest.mark.parametrize(("case", "message"), [
@@ -42,7 +42,7 @@ def test_reject_record(conn, case, message):
     elif case == "time":
         row["stops"][1]["time"] = row["stops"][0]["time"]
     elif case == "existing":
-        row = record("ALX-0700", "2024-09-15")
+        row = record("ALX-0700", "2026-11-11")
         records = [row]
     elif case == "batch":
         records.append(row.copy())
@@ -67,7 +67,7 @@ def test_atomic_import(conn, case):
     with pytest.raises(TripNotFound):
         db.get_trip(conn, good["code"], good["service_date"])
     if case == "preserves":
-        assert len(db.list_trips(conn)) == 2
+        assert len(db.list_trips(conn)) == 8
     if case == "retry":
         bad["seats"] = 49
         assert timetable.import_trips(conn, records) == 2

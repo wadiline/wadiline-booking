@@ -6,5 +6,25 @@
   {
     "code": "ALX",
     "name": "Alexandria"
+  },
+  {
+    "code": "HRG",
+    "name": "Hurghada"
+  },
+  {
+    "code": "SSH",
+    "name": "Sharm El Sheikh"
+  },
+  {
+    "code": "AST",
+    "name": "Assiut"
+  },
+  {
+    "code": "LXR",
+    "name": "Luxor"
+  },
+  {
+    "code": "ASW",
+    "name": "Aswan"
   }
 ]

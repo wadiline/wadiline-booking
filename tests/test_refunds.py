@@ -2,9 +2,10 @@ from datetime import UTC, datetime, timedelta, timezone
 
 import pytest
 
+from wadiline import db
 from wadiline.refunds import RefundShare, refund_piastres, refund_share
 
-NOW = datetime(2024, 6, 23, 10, tzinfo=UTC)
+NOW = datetime(2026, 11, 11, 10, tzinfo=UTC)
 
 
 @pytest.mark.parametrize(("seconds", "share"), [
@@ -26,6 +27,12 @@ def test_naive_refused(departure_aware, now_aware):
 @pytest.mark.parametrize(("price", "half"), [(0, 0), (1, 0), (5, 2), (24000, 12000)])
 def test_refund_amount(share, price, half):
     assert refund_piastres(price, share) == {"full": price, "half": half, "none": 0}[share]
+
+
+@pytest.mark.parametrize(("board", "expected"), [(0, "none"), (2, "half")])
+def test_boarding_time(conn, board, expected):
+    departure = db.get_trip(conn, "ASW-0700").time_at(board)
+    assert refund_share(departure, NOW).value == expected
 
 
 def test_same_instant_other_offset():

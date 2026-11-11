@@ -7,9 +7,9 @@ from wadiline.models import BadLeg, Leg, Stop, Trip, TripStop, UnknownStop
 
 @pytest.fixture
 def trip():
-    at = datetime(2024, 2, 18, 10, tzinfo=UTC)
+    at = datetime(2026, 11, 11, 10, tzinfo=UTC)
     stops = (Stop("CAI", "Cairo"), Stop("AST", "Assiut"), Stop("LXR", "Luxor"), Stop("ASW", "Aswan"))
-    return Trip(1, "TST-0100", date(2024, 2, 18), "UPPER", 49,
+    return Trip(1, "TST-0100", date(2026, 11, 11), "UPPER", 49,
                 tuple(TripStop(i, stop, at) for i, stop in enumerate(stops)))
 
 
@@ -47,5 +47,5 @@ def test_trip_leg(trip, start, end, outcome):
 
 
 def test_time_and_stop_name(trip):
-    assert trip.time_at(1) == datetime(2024, 2, 18, 10, tzinfo=UTC)
+    assert trip.time_at(1) == datetime(2026, 11, 11, 10, tzinfo=UTC)
     assert trip.stop_name(1) == "Assiut"

@@ -1,7 +1,311 @@
 [
   {
     "ref": "WL-58001",
-    "sold_at": "2024-09-14T07:00:00Z",
+    "sold_at": "2026-10-12T07:39:11Z",
+    "channel": "app",
+    "email": "shahd.elmasry@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 37,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Elmasry",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58002",
+    "sold_at": "2026-10-12T08:55:10Z",
+    "channel": "app",
+    "email": "menna.moussa@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 39,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Menna Moussa",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58003",
+    "sold_at": "2026-10-13T03:02:53Z",
+    "channel": "web",
+    "email": "shahd.metwally@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 30,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Shahd Metwally",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58004",
+    "sold_at": "2026-10-13T07:12:26Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 33,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Haneen Elshazly",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58005",
+    "sold_at": "2026-10-13T08:35:38Z",
+    "channel": "app",
+    "email": "walid.marei@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 5,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Walid Marei",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58006",
+    "sold_at": "2026-10-13T13:46:56Z",
+    "channel": "web",
+    "email": "haneen.shalaby@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 22,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Haneen Shalaby",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 46,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Moataz Soliman",
+        "type": "child",
+        "price_piastres": 16000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58007",
+    "sold_at": "2026-10-13T13:52:43Z",
+    "channel": "web",
+    "email": "adham.selim@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 46,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Adham Selim",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58008",
+    "sold_at": "2026-10-14T03:49:32Z",
+    "channel": "web",
+    "email": "safwat.moussa@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 39,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Safwat Moussa",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58009",
+    "sold_at": "2026-10-14T10:12:15Z",
+    "channel": "web",
+    "email": "nawal.keshk@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 16,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Keshk",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58010",
+    "sold_at": "2026-10-14T15:03:45Z",
+    "channel": "web",
+    "email": "adham.shalaby@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 11,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Adham Shalaby",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58011",
+    "sold_at": "2026-10-14T17:17:04Z",
+    "channel": "web",
+    "email": "shahd.abouzeid@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 4,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Abouzeid",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 46,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Zahran",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58012",
+    "sold_at": "2026-10-14T18:44:03Z",
+    "channel": "web",
+    "email": "malak.soliman@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 31,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Soliman",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 37,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Marei",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 26,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Shalaby",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58013",
+    "sold_at": "2026-10-14T19:20:46Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 33,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Abeer Selim",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58014",
+    "sold_at": "2026-10-14T21:03:14Z",
     "channel": "counter",
     "email": null,
     "trip": "ALX-0700",
@@ -13,6 +317,5492 @@
         "name": "Donia Gabr",
         "type": "adult",
         "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58015",
+    "sold_at": "2026-10-14T21:24:44Z",
+    "channel": "web",
+    "email": "donia.nasr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 10,
+        "from": "AST",
+        "to": "ASW",
+        "name": "Donia Nasr",
+        "type": "adult",
+        "price_piastres": 56000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58016",
+    "sold_at": "2026-10-14T21:31:17Z",
+    "channel": "app",
+    "email": "walid.shalaby@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 20,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Walid Shalaby",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 15,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Metwally",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58017",
+    "sold_at": "2026-10-14T23:25:22Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 17,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Ferial Shalaby",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58018",
+    "sold_at": "2026-10-15T00:58:16Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 29,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Moataz Hassanein",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58019",
+    "sold_at": "2026-10-15T06:46:03Z",
+    "channel": "app",
+    "email": "ayman.selim@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 11,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Selim",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58020",
+    "sold_at": "2026-10-15T13:55:50Z",
+    "channel": "app",
+    "email": "hager.metwally@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 44,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Hager Metwally",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58021",
+    "sold_at": "2026-10-15T20:24:56Z",
+    "channel": "web",
+    "email": "hager.soliman@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 27,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Soliman",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58022",
+    "sold_at": "2026-10-15T20:25:26Z",
+    "channel": "app",
+    "email": "abeer.shalaby@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 21,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Abeer Shalaby",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58023",
+    "sold_at": "2026-10-16T01:11:21Z",
+    "channel": "web",
+    "email": "donia.gabr@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 38,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Donia Gabr",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58024",
+    "sold_at": "2026-10-16T06:00:25Z",
+    "channel": "web",
+    "email": "adham.soliman@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 39,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Adham Soliman",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58025",
+    "sold_at": "2026-10-16T09:18:18Z",
+    "channel": "web",
+    "email": "adham.elmasry@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 7,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Adham Elmasry",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58026",
+    "sold_at": "2026-10-16T09:56:23Z",
+    "channel": "web",
+    "email": "donia.abouzeid@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 13,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Donia Abouzeid",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58027",
+    "sold_at": "2026-10-16T11:27:15Z",
+    "channel": "web",
+    "email": "abeer.metwally@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 17,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Abeer Metwally",
+        "type": "student",
+        "price_piastres": 69000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58028",
+    "sold_at": "2026-10-16T20:50:04Z",
+    "channel": "app",
+    "email": "asmaa.sakr@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 16,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Asmaa Sakr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58029",
+    "sold_at": "2026-10-16T21:49:02Z",
+    "channel": "web",
+    "email": "walid.selim@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 43,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Walid Selim",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58030",
+    "sold_at": "2026-10-17T01:19:48Z",
+    "channel": "web",
+    "email": "nawal.soliman@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 35,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Nawal Soliman",
+        "type": "adult",
+        "price_piastres": 78000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58031",
+    "sold_at": "2026-10-17T02:48:49Z",
+    "channel": "web",
+    "email": "asmaa.hassanein@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 44,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Asmaa Hassanein",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58032",
+    "sold_at": "2026-10-17T03:44:12Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 20,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Ferial Soliman",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58033",
+    "sold_at": "2026-10-17T11:41:18Z",
+    "channel": "web",
+    "email": "menna.nasr@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 7,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Nasr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 45,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Metwally",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58034",
+    "sold_at": "2026-10-17T13:28:57Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 31,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Menna Hassanein",
+        "type": "student",
+        "price_piastres": 58500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58035",
+    "sold_at": "2026-10-17T15:43:15Z",
+    "channel": "app",
+    "email": "malak.metwally@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 34,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Metwally",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58036",
+    "sold_at": "2026-10-17T19:58:46Z",
+    "channel": "web",
+    "email": "menna.keshk@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 9,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Keshk",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58037",
+    "sold_at": "2026-10-18T05:10:49Z",
+    "channel": "web",
+    "email": "moataz.moussa@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 4,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Moataz Moussa",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58038",
+    "sold_at": "2026-10-18T09:30:06Z",
+    "channel": "app",
+    "email": "ayman.moussa@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 10,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Ayman Moussa",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 25,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Ayman Gabr",
+        "type": "student",
+        "price_piastres": 54000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 39,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Asmaa Keshk",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58039",
+    "sold_at": "2026-10-18T15:01:02Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 31,
+        "from": "CAI",
+        "to": "AST",
+        "name": "Abeer Hassanein",
+        "type": "adult",
+        "price_piastres": 42000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58040",
+    "sold_at": "2026-10-18T19:28:52Z",
+    "channel": "app",
+    "email": "shahd.metwally@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 49,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Shahd Metwally",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58041",
+    "sold_at": "2026-10-18T21:57:23Z",
+    "channel": "web",
+    "email": "haneen.metwally@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 27,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Haneen Metwally",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58042",
+    "sold_at": "2026-10-19T10:11:06Z",
+    "channel": "app",
+    "email": "nawal.marei@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 10,
+        "from": "AST",
+        "to": "ASW",
+        "name": "Nawal Marei",
+        "type": "adult",
+        "price_piastres": 56000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58043",
+    "sold_at": "2026-10-19T11:17:23Z",
+    "channel": "web",
+    "email": "moataz.moussa@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 30,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Moataz Moussa",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 28,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Abeer Selim",
+        "type": "child",
+        "price_piastres": 16000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58044",
+    "sold_at": "2026-10-19T11:45:19Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 22,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Menna Selim",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58045",
+    "sold_at": "2026-10-20T07:45:38Z",
+    "channel": "app",
+    "email": "shahd.elmasry@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 30,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Elmasry",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58046",
+    "sold_at": "2026-10-20T11:09:23Z",
+    "channel": "web",
+    "email": "safwat.zahran@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 8,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Safwat Zahran",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58047",
+    "sold_at": "2026-10-20T13:40:15Z",
+    "channel": "web",
+    "email": "hager.marei@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 45,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Hager Marei",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58048",
+    "sold_at": "2026-10-20T15:07:28Z",
+    "channel": "web",
+    "email": "nawal.moussa@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 32,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Nawal Moussa",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58049",
+    "sold_at": "2026-10-20T15:21:29Z",
+    "channel": "app",
+    "email": "haneen.abouzeid@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 36,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Haneen Abouzeid",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 43,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Moataz Abouzeid",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58050",
+    "sold_at": "2026-10-20T17:01:35Z",
+    "channel": "app",
+    "email": "abeer.zahran@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 26,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Abeer Zahran",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58051",
+    "sold_at": "2026-10-20T19:37:40Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 18,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Metwally",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58052",
+    "sold_at": "2026-10-20T21:50:08Z",
+    "channel": "web",
+    "email": "hager.marei@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 6,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Hager Marei",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58053",
+    "sold_at": "2026-10-21T00:20:44Z",
+    "channel": "app",
+    "email": "donia.nasr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 33,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Donia Nasr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58054",
+    "sold_at": "2026-10-21T01:02:58Z",
+    "channel": "app",
+    "email": "adham.abouzeid@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 11,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Adham Abouzeid",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58055",
+    "sold_at": "2026-10-21T02:33:54Z",
+    "channel": "app",
+    "email": "haneen.marei@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 3,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Haneen Marei",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58056",
+    "sold_at": "2026-10-21T03:00:19Z",
+    "channel": "app",
+    "email": "nawal.zahran@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 21,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Nawal Zahran",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58057",
+    "sold_at": "2026-10-21T07:24:02Z",
+    "channel": "app",
+    "email": "haneen.elshazly@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 18,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Haneen Elshazly",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58058",
+    "sold_at": "2026-10-21T13:06:29Z",
+    "channel": "web",
+    "email": "walid.marei@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 16,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Walid Marei",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58059",
+    "sold_at": "2026-10-21T16:16:19Z",
+    "channel": "app",
+    "email": "malak.keshk@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 7,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Keshk",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 34,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Haneen Sakr",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58060",
+    "sold_at": "2026-10-21T20:21:55Z",
+    "channel": "web",
+    "email": "safwat.sakr@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 44,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Safwat Sakr",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58061",
+    "sold_at": "2026-10-21T23:39:51Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 37,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Abeer Shalaby",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58062",
+    "sold_at": "2026-10-22T01:43:23Z",
+    "channel": "web",
+    "email": "ayman.sakr@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 13,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Sakr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58063",
+    "sold_at": "2026-10-22T03:25:25Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 36,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Walid Marei",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 47,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Nawal Sakr",
+        "type": "child",
+        "price_piastres": 36000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58064",
+    "sold_at": "2026-10-22T05:13:13Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 42,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Safwat Metwally",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58065",
+    "sold_at": "2026-10-22T05:55:22Z",
+    "channel": "app",
+    "email": "nawal.elshazly@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 2,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Elshazly",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-11T04:00:00Z",
+        "refund_piastres": 0
+      }
+    ]
+  },
+  {
+    "ref": "WL-58066",
+    "sold_at": "2026-10-22T14:19:55Z",
+    "channel": "web",
+    "email": "ferial.sakr@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 26,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Sakr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 10,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Donia Selim",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58067",
+    "sold_at": "2026-10-22T15:08:05Z",
+    "channel": "web",
+    "email": "shahd.hassanein@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 28,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Shahd Hassanein",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58068",
+    "sold_at": "2026-10-22T16:48:03Z",
+    "channel": "web",
+    "email": "ayman.keshk@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 20,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Ayman Keshk",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58069",
+    "sold_at": "2026-10-23T07:14:25Z",
+    "channel": "web",
+    "email": "menna.elmasry@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 10,
+        "from": "CAI",
+        "to": "AST",
+        "name": "Menna Elmasry",
+        "type": "adult",
+        "price_piastres": 42000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58070",
+    "sold_at": "2026-10-23T07:16:36Z",
+    "channel": "web",
+    "email": "safwat.gabr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 3,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Safwat Gabr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58071",
+    "sold_at": "2026-10-23T17:08:23Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 7,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Moussa",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58072",
+    "sold_at": "2026-10-23T20:05:25Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 32,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Haneen Zahran",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 8,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Hager Zahran",
+        "type": "child",
+        "price_piastres": 36000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58073",
+    "sold_at": "2026-10-23T21:13:39Z",
+    "channel": "app",
+    "email": "moataz.soliman@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 48,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Moataz Soliman",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58074",
+    "sold_at": "2026-10-24T08:51:27Z",
+    "channel": "app",
+    "email": "safwat.soliman@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 35,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Safwat Soliman",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58075",
+    "sold_at": "2026-10-25T13:44:26Z",
+    "channel": "web",
+    "email": "asmaa.elshazly@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 29,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Asmaa Elshazly",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58076",
+    "sold_at": "2026-10-25T22:53:24Z",
+    "channel": "app",
+    "email": "adham.abouzeid@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 10,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Adham Abouzeid",
+        "type": "student",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58077",
+    "sold_at": "2026-10-26T00:54:25Z",
+    "channel": "app",
+    "email": "ferial.marei@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 13,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Ferial Marei",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58078",
+    "sold_at": "2026-10-26T03:01:44Z",
+    "channel": "web",
+    "email": "adham.hassanein@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 21,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Adham Hassanein",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-11T01:00:00Z",
+        "refund_piastres": 9750
+      }
+    ]
+  },
+  {
+    "ref": "WL-58079",
+    "sold_at": "2026-10-26T04:16:24Z",
+    "channel": "web",
+    "email": "malak.shalaby@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 27,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Shalaby",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58080",
+    "sold_at": "2026-10-26T04:27:23Z",
+    "channel": "web",
+    "email": "ayman.zahran@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 19,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Ayman Zahran",
+        "type": "adult",
+        "price_piastres": 78000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58081",
+    "sold_at": "2026-10-26T07:58:16Z",
+    "channel": "app",
+    "email": "donia.elmasry@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 23,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Donia Elmasry",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58082",
+    "sold_at": "2026-10-26T08:34:45Z",
+    "channel": "app",
+    "email": "asmaa.sakr@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 24,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Asmaa Sakr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58083",
+    "sold_at": "2026-10-26T18:45:29Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 35,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Selim",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-10T12:00:00Z",
+        "refund_piastres": 26000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58084",
+    "sold_at": "2026-10-26T20:24:23Z",
+    "channel": "app",
+    "email": "ferial.elmasry@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 15,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Elmasry",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58085",
+    "sold_at": "2026-10-27T02:34:48Z",
+    "channel": "app",
+    "email": "donia.nasr@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 4,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Donia Nasr",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58086",
+    "sold_at": "2026-10-27T04:33:04Z",
+    "channel": "app",
+    "email": "malak.nasr@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 21,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Malak Nasr",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58087",
+    "sold_at": "2026-10-27T21:40:17Z",
+    "channel": "web",
+    "email": "shahd.selim@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 22,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Selim",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58088",
+    "sold_at": "2026-10-27T22:51:15Z",
+    "channel": "app",
+    "email": "malak.keshk@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 38,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Malak Keshk",
+        "type": "student",
+        "price_piastres": 58500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58089",
+    "sold_at": "2026-10-27T23:13:02Z",
+    "channel": "web",
+    "email": "malak.keshk@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 30,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Keshk",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58090",
+    "sold_at": "2026-10-28T05:14:27Z",
+    "channel": "app",
+    "email": "shahd.moussa@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 9,
+        "from": "CAI",
+        "to": "AST",
+        "name": "Shahd Moussa",
+        "type": "adult",
+        "price_piastres": 42000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58091",
+    "sold_at": "2026-10-28T15:30:19Z",
+    "channel": "web",
+    "email": "safwat.gabr@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 48,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Safwat Gabr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58092",
+    "sold_at": "2026-10-28T17:24:23Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 21,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Marei",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58093",
+    "sold_at": "2026-10-28T18:20:11Z",
+    "channel": "app",
+    "email": "walid.nasr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 40,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Walid Nasr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58094",
+    "sold_at": "2026-10-28T19:25:18Z",
+    "channel": "web",
+    "email": "abeer.metwally@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 25,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Abeer Metwally",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58095",
+    "sold_at": "2026-10-28T21:19:40Z",
+    "channel": "web",
+    "email": "malak.keshk@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 24,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Malak Keshk",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58096",
+    "sold_at": "2026-10-29T05:03:49Z",
+    "channel": "app",
+    "email": "asmaa.shalaby@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 40,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Asmaa Shalaby",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 20,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Zahran",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 31,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Nasr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58097",
+    "sold_at": "2026-10-29T08:10:23Z",
+    "channel": "app",
+    "email": "ferial.keshk@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 47,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Keshk",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 13,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Keshk",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58098",
+    "sold_at": "2026-10-29T08:17:45Z",
+    "channel": "app",
+    "email": "safwat.shalaby@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 26,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Safwat Shalaby",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58099",
+    "sold_at": "2026-10-30T00:02:41Z",
+    "channel": "web",
+    "email": "menna.elshazly@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 8,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Elshazly",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 6,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Shalaby",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 29,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Nasr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58100",
+    "sold_at": "2026-10-30T02:22:03Z",
+    "channel": "web",
+    "email": "ferial.elmasry@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 41,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Ferial Elmasry",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58101",
+    "sold_at": "2026-10-30T03:07:47Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 32,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Walid Elmasry",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58102",
+    "sold_at": "2026-10-31T04:17:45Z",
+    "channel": "app",
+    "email": "abeer.soliman@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 16,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Abeer Soliman",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58103",
+    "sold_at": "2026-10-31T06:37:44Z",
+    "channel": "web",
+    "email": "hager.marei@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 33,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Hager Marei",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58104",
+    "sold_at": "2026-10-31T18:54:26Z",
+    "channel": "app",
+    "email": "shahd.gabr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 12,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Shahd Gabr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58105",
+    "sold_at": "2026-10-31T23:05:04Z",
+    "channel": "web",
+    "email": "asmaa.elshazly@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 18,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Asmaa Elshazly",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 45,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Shahd Nasr",
+        "type": "child",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58106",
+    "sold_at": "2026-11-01T02:42:19Z",
+    "channel": "app",
+    "email": "walid.nasr@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 45,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Walid Nasr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58107",
+    "sold_at": "2026-11-01T03:39:17Z",
+    "channel": "app",
+    "email": "safwat.elshazly@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 15,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Safwat Elshazly",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58108",
+    "sold_at": "2026-11-01T04:44:58Z",
+    "channel": "web",
+    "email": "adham.metwally@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 43,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Adham Metwally",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58109",
+    "sold_at": "2026-11-01T07:54:14Z",
+    "channel": "app",
+    "email": "walid.elmasry@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 44,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Walid Elmasry",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58110",
+    "sold_at": "2026-11-01T07:54:55Z",
+    "channel": "app",
+    "email": "haneen.zahran@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 5,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Haneen Zahran",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58111",
+    "sold_at": "2026-11-01T09:08:25Z",
+    "channel": "app",
+    "email": "adham.elmasry@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 1,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Adham Elmasry",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58112",
+    "sold_at": "2026-11-01T14:26:24Z",
+    "channel": "app",
+    "email": "abeer.sakr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 12,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Abeer Sakr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58113",
+    "sold_at": "2026-11-01T15:19:23Z",
+    "channel": "app",
+    "email": "donia.moussa@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 1,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Donia Moussa",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58114",
+    "sold_at": "2026-11-01T20:51:33Z",
+    "channel": "app",
+    "email": "ferial.selim@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 29,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Ferial Selim",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58115",
+    "sold_at": "2026-11-01T21:20:34Z",
+    "channel": "app",
+    "email": "ayman.soliman@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 27,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Ayman Soliman",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58116",
+    "sold_at": "2026-11-01T23:00:37Z",
+    "channel": "web",
+    "email": "malak.nasr@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 3,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Nasr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58117",
+    "sold_at": "2026-11-02T09:05:00Z",
+    "channel": "web",
+    "email": "ali.badawi@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 22,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Ali Badawi",
+        "type": "adult",
+        "price_piastres": 78000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58118",
+    "sold_at": "2026-11-02T14:14:20Z",
+    "channel": "app",
+    "email": "ferial.gabr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 22,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Ferial Gabr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58119",
+    "sold_at": "2026-11-02T14:18:39Z",
+    "channel": "app",
+    "email": "ferial.elshazly@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 35,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Ferial Elshazly",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58120",
+    "sold_at": "2026-11-02T14:57:49Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 46,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Menna Elmasry",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58121",
+    "sold_at": "2026-11-02T15:24:44Z",
+    "channel": "app",
+    "email": "asmaa.abouzeid@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 23,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Asmaa Abouzeid",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58122",
+    "sold_at": "2026-11-02T16:06:06Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 15,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Haneen Metwally",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58123",
+    "sold_at": "2026-11-02T20:38:54Z",
+    "channel": "web",
+    "email": "adham.gabr@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 23,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Adham Gabr",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 31,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Donia Gabr",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58124",
+    "sold_at": "2026-11-02T23:14:01Z",
+    "channel": "app",
+    "email": "donia.hassanein@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 44,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Donia Hassanein",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-10T17:00:00Z",
+        "refund_piastres": 13000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58125",
+    "sold_at": "2026-11-02T23:58:04Z",
+    "channel": "web",
+    "email": "adham.gabr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 31,
+        "from": "LXR",
+        "to": "ASW",
+        "name": "Adham Gabr",
+        "type": "adult",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58126",
+    "sold_at": "2026-11-03T04:38:03Z",
+    "channel": "app",
+    "email": "adham.moussa@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 27,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Adham Moussa",
+        "type": "adult",
+        "price_piastres": 78000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58127",
+    "sold_at": "2026-11-03T06:22:41Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 42,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Sakr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58128",
+    "sold_at": "2026-11-03T08:27:12Z",
+    "channel": "web",
+    "email": "ayman.sakr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 2,
+        "from": "AST",
+        "to": "ASW",
+        "name": "Ayman Sakr",
+        "type": "adult",
+        "price_piastres": 56000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58129",
+    "sold_at": "2026-11-03T08:32:29Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 6,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Metwally",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58130",
+    "sold_at": "2026-11-03T14:25:57Z",
+    "channel": "web",
+    "email": "nawal.gabr@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 45,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Gabr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58131",
+    "sold_at": "2026-11-03T17:36:41Z",
+    "channel": "web",
+    "email": "menna.zahran@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 30,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Menna Zahran",
+        "type": "adult",
+        "price_piastres": 78000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58132",
+    "sold_at": "2026-11-03T18:58:35Z",
+    "channel": "app",
+    "email": "ferial.soliman@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 13,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Ferial Soliman",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58133",
+    "sold_at": "2026-11-03T21:28:42Z",
+    "channel": "app",
+    "email": "nawal.nasr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 5,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Nawal Nasr",
+        "type": "adult",
+        "price_piastres": 78000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58134",
+    "sold_at": "2026-11-03T21:31:01Z",
+    "channel": "web",
+    "email": "moataz.sakr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 39,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Moataz Sakr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58135",
+    "sold_at": "2026-11-03T21:57:31Z",
+    "channel": "web",
+    "email": "ferial.hassanein@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 42,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Ferial Hassanein",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58136",
+    "sold_at": "2026-11-03T22:29:41Z",
+    "channel": "app",
+    "email": "moataz.hassanein@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 7,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Moataz Hassanein",
+        "type": "student",
+        "price_piastres": 48000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58137",
+    "sold_at": "2026-11-03T23:00:36Z",
+    "channel": "app",
+    "email": "adham.metwally@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 24,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Adham Metwally",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58138",
+    "sold_at": "2026-11-03T23:12:32Z",
+    "channel": "app",
+    "email": "ferial.selim@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 19,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Ferial Selim",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-10T18:30:00Z",
+        "refund_piastres": 32000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58139",
+    "sold_at": "2026-11-03T23:31:26Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 12,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Asmaa Soliman",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-10T04:00:00Z",
+        "refund_piastres": 26000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58140",
+    "sold_at": "2026-11-04T00:13:09Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 17,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Haneen Sakr",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58141",
+    "sold_at": "2026-11-04T00:52:18Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 24,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Gabr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58142",
+    "sold_at": "2026-11-04T02:07:39Z",
+    "channel": "app",
+    "email": "nawal.moussa@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 30,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Moussa",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58143",
+    "sold_at": "2026-11-04T02:39:01Z",
+    "channel": "web",
+    "email": "nawal.keshk@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 28,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Nawal Keshk",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 33,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Nawal Zahran",
+        "type": "child",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58144",
+    "sold_at": "2026-11-04T05:11:15Z",
+    "channel": "app",
+    "email": "haneen.soliman@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 15,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Haneen Soliman",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58145",
+    "sold_at": "2026-11-04T07:48:30Z",
+    "channel": "web",
+    "email": "ayman.nasr@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 10,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Nasr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58146",
+    "sold_at": "2026-11-04T08:03:50Z",
+    "channel": "web",
+    "email": "malak.marei@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 40,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Marei",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58147",
+    "sold_at": "2026-11-04T08:50:34Z",
+    "channel": "app",
+    "email": "safwat.hassanein@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 36,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Safwat Hassanein",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58148",
+    "sold_at": "2026-11-04T08:56:20Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 38,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Soliman",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 34,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Nasr",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 22,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Asmaa Elmasry",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 27,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Elshazly",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58149",
+    "sold_at": "2026-11-04T08:56:53Z",
+    "channel": "web",
+    "email": "nawal.gabr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 11,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Nawal Gabr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58150",
+    "sold_at": "2026-11-04T10:11:26Z",
+    "channel": "app",
+    "email": "ayman.nasr@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 47,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Ayman Nasr",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58151",
+    "sold_at": "2026-11-04T10:28:15Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 39,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Walid Elmasry",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58152",
+    "sold_at": "2026-11-04T10:50:12Z",
+    "channel": "web",
+    "email": "donia.selim@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 15,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Donia Selim",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58153",
+    "sold_at": "2026-11-04T11:20:59Z",
+    "channel": "web",
+    "email": "shahd.hassanein@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 23,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Hassanein",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58154",
+    "sold_at": "2026-11-04T11:46:45Z",
+    "channel": "web",
+    "email": "ayman.elshazly@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 47,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Ayman Elshazly",
+        "type": "student",
+        "price_piastres": 69000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58155",
+    "sold_at": "2026-11-04T12:14:40Z",
+    "channel": "app",
+    "email": "menna.sakr@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 25,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Sakr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 2,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Donia Gabr",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58156",
+    "sold_at": "2026-11-04T12:27:14Z",
+    "channel": "app",
+    "email": "menna.elmasry@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 42,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Menna Elmasry",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 36,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Walid Gabr",
+        "type": "child",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58157",
+    "sold_at": "2026-11-04T13:50:14Z",
+    "channel": "app",
+    "email": "donia.gabr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 19,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Donia Gabr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58158",
+    "sold_at": "2026-11-04T13:52:20Z",
+    "channel": "app",
+    "email": "nawal.sakr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 30,
+        "from": "LXR",
+        "to": "ASW",
+        "name": "Nawal Sakr",
+        "type": "adult",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58159",
+    "sold_at": "2026-11-04T14:02:54Z",
+    "channel": "app",
+    "email": "abeer.abouzeid@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 6,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Abeer Abouzeid",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58160",
+    "sold_at": "2026-11-04T14:14:29Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 23,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Safwat Nasr",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 14,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Asmaa Abouzeid",
+        "type": "child",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58161",
+    "sold_at": "2026-11-04T14:49:51Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 17,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Shalaby",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58162",
+    "sold_at": "2026-11-04T15:15:34Z",
+    "channel": "app",
+    "email": "nawal.soliman@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 24,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Nawal Soliman",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58163",
+    "sold_at": "2026-11-04T15:32:52Z",
+    "channel": "web",
+    "email": "menna.moussa@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 33,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Menna Moussa",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 43,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Malak Metwally",
+        "type": "child",
+        "price_piastres": 16000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58164",
+    "sold_at": "2026-11-04T16:10:49Z",
+    "channel": "web",
+    "email": "hager.nasr@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 20,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Nasr",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58165",
+    "sold_at": "2026-11-04T17:44:47Z",
+    "channel": "app",
+    "email": "abeer.marei@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 17,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Abeer Marei",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58166",
+    "sold_at": "2026-11-04T18:08:38Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 9,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Malak Selim",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58167",
+    "sold_at": "2026-11-04T20:12:31Z",
+    "channel": "web",
+    "email": "malak.keshk@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 24,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Malak Keshk",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58168",
+    "sold_at": "2026-11-04T20:50:31Z",
+    "channel": "app",
+    "email": "hager.elshazly@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 14,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Hager Elshazly",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 40,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Ferial Soliman",
+        "type": "child",
+        "price_piastres": 16000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 45,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Safwat Metwally",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58169",
+    "sold_at": "2026-11-04T21:06:51Z",
+    "channel": "web",
+    "email": "asmaa.keshk@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 6,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Asmaa Keshk",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-10T05:30:00Z",
+        "refund_piastres": 64000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58170",
+    "sold_at": "2026-11-04T22:38:03Z",
+    "channel": "web",
+    "email": "ayman.metwally@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 25,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Metwally",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58171",
+    "sold_at": "2026-11-05T03:38:01Z",
+    "channel": "app",
+    "email": "moataz.abouzeid@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 40,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Moataz Abouzeid",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58172",
+    "sold_at": "2026-11-05T04:46:18Z",
+    "channel": "app",
+    "email": "donia.abouzeid@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 39,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Donia Abouzeid",
+        "type": "student",
+        "price_piastres": 48000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58173",
+    "sold_at": "2026-11-05T09:25:36Z",
+    "channel": "web",
+    "email": "shahd.marei@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 41,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Shahd Marei",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58174",
+    "sold_at": "2026-11-05T13:30:03Z",
+    "channel": "app",
+    "email": "menna.hassanein@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 32,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Hassanein",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 48,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Soliman",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58175",
+    "sold_at": "2026-11-05T17:24:18Z",
+    "channel": "app",
+    "email": "ayman.abouzeid@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 46,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Ayman Abouzeid",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-10T20:00:00Z",
+        "refund_piastres": 72000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58176",
+    "sold_at": "2026-11-05T17:56:42Z",
+    "channel": "app",
+    "email": "malak.gabr@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 23,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Malak Gabr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58177",
+    "sold_at": "2026-11-05T21:47:16Z",
+    "channel": "web",
+    "email": "abeer.moussa@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 37,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Abeer Moussa",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58178",
+    "sold_at": "2026-11-05T22:27:15Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 36,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Abouzeid",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 38,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Zahran",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58179",
+    "sold_at": "2026-11-06T01:54:48Z",
+    "channel": "web",
+    "email": "walid.keshk@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 48,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Walid Keshk",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58180",
+    "sold_at": "2026-11-06T02:08:54Z",
+    "channel": "web",
+    "email": "ayman.gabr@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 1,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Gabr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58181",
+    "sold_at": "2026-11-06T10:11:44Z",
+    "channel": "app",
+    "email": "donia.marei@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 34,
+        "from": "LXR",
+        "to": "ASW",
+        "name": "Donia Marei",
+        "type": "adult",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58182",
+    "sold_at": "2026-11-06T10:43:10Z",
+    "channel": "web",
+    "email": "ferial.abouzeid@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 28,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Abouzeid",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58183",
+    "sold_at": "2026-11-06T12:56:12Z",
+    "channel": "web",
+    "email": "ayman.elmasry@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 26,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Elmasry",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58184",
+    "sold_at": "2026-11-06T15:06:05Z",
+    "channel": "app",
+    "email": "hager.elshazly@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 5,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Hager Elshazly",
+        "type": "student",
+        "price_piastres": 48000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58185",
+    "sold_at": "2026-11-06T15:27:32Z",
+    "channel": "app",
+    "email": "walid.shalaby@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 47,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Walid Shalaby",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58186",
+    "sold_at": "2026-11-06T15:43:00Z",
+    "channel": "web",
+    "email": "shahd.sakr@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 32,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Shahd Sakr",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58187",
+    "sold_at": "2026-11-06T17:09:10Z",
+    "channel": "app",
+    "email": "shahd.gabr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 21,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Shahd Gabr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58188",
+    "sold_at": "2026-11-06T17:44:10Z",
+    "channel": "app",
+    "email": "donia.sakr@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 9,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Donia Sakr",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58189",
+    "sold_at": "2026-11-06T18:39:37Z",
+    "channel": "app",
+    "email": "ayman.selim@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 4,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Selim",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58190",
+    "sold_at": "2026-11-06T19:19:14Z",
+    "channel": "web",
+    "email": "shahd.sakr@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 6,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Shahd Sakr",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58191",
+    "sold_at": "2026-11-06T22:34:03Z",
+    "channel": "app",
+    "email": "asmaa.marei@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 48,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Asmaa Marei",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58192",
+    "sold_at": "2026-11-06T22:46:32Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 1,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Ferial Shalaby",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58193",
+    "sold_at": "2026-11-07T03:15:22Z",
+    "channel": "app",
+    "email": "moataz.gabr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 11,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Moataz Gabr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58194",
+    "sold_at": "2026-11-07T03:48:48Z",
+    "channel": "web",
+    "email": "menna.zahran@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 28,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Menna Zahran",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-11T09:00:00Z",
+        "refund_piastres": 36000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58195",
+    "sold_at": "2026-11-07T04:30:02Z",
+    "channel": "app",
+    "email": "adham.soliman@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 18,
+        "from": "LXR",
+        "to": "ASW",
+        "name": "Adham Soliman",
+        "type": "adult",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58196",
+    "sold_at": "2026-11-07T07:22:30Z",
+    "channel": "app",
+    "email": "walid.keshk@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 7,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Walid Keshk",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58197",
+    "sold_at": "2026-11-07T09:19:31Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 19,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Adham Zahran",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-10T12:00:00Z",
+        "refund_piastres": 26000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58198",
+    "sold_at": "2026-11-07T14:41:45Z",
+    "channel": "app",
+    "email": "haneen.elshazly@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 2,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Haneen Elshazly",
+        "type": "student",
+        "price_piastres": 54000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-10T20:00:00Z",
+        "refund_piastres": 54000
+      }
+    ]
+  },
+  {
+    "ref": "WL-58199",
+    "sold_at": "2026-11-07T15:03:28Z",
+    "channel": "web",
+    "email": "donia.elshazly@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 36,
+        "from": "CAI",
+        "to": "LXR",
+        "name": "Donia Elshazly",
+        "type": "adult",
+        "price_piastres": 78000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58200",
+    "sold_at": "2026-11-07T17:29:20Z",
+    "channel": "web",
+    "email": "malak.gabr@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 18,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Malak Gabr",
+        "type": "student",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58201",
+    "sold_at": "2026-11-07T18:32:55Z",
+    "channel": "web",
+    "email": "hager.soliman@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 1,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Soliman",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 11,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Keshk",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58202",
+    "sold_at": "2026-11-07T22:04:05Z",
+    "channel": "web",
+    "email": "moataz.metwally@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 3,
+        "from": "AST",
+        "to": "ASW",
+        "name": "Moataz Metwally",
+        "type": "adult",
+        "price_piastres": 56000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58203",
+    "sold_at": "2026-11-07T22:25:14Z",
+    "channel": "app",
+    "email": "moataz.gabr@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 31,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Moataz Gabr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 5,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Hassanein",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58204",
+    "sold_at": "2026-11-07T23:45:31Z",
+    "channel": "web",
+    "email": "asmaa.selim@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 19,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Asmaa Selim",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58205",
+    "sold_at": "2026-11-08T00:09:51Z",
+    "channel": "web",
+    "email": "menna.abouzeid@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 41,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Abouzeid",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58206",
+    "sold_at": "2026-11-08T01:00:31Z",
+    "channel": "app",
+    "email": "hager.sakr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 38,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Hager Sakr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58207",
+    "sold_at": "2026-11-08T01:54:48Z",
+    "channel": "web",
+    "email": "donia.zahran@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 18,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Donia Zahran",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58208",
+    "sold_at": "2026-11-08T02:02:32Z",
+    "channel": "app",
+    "email": "abeer.metwally@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 14,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Abeer Metwally",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58209",
+    "sold_at": "2026-11-08T04:57:55Z",
+    "channel": "web",
+    "email": "abeer.hassanein@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 15,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Abeer Hassanein",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 8,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Walid Elshazly",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58210",
+    "sold_at": "2026-11-08T06:25:57Z",
+    "channel": "web",
+    "email": "ayman.gabr@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 6,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Ayman Gabr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58211",
+    "sold_at": "2026-11-08T07:05:48Z",
+    "channel": "web",
+    "email": "hager.moussa@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 25,
+        "from": "CAI",
+        "to": "AST",
+        "name": "Hager Moussa",
+        "type": "adult",
+        "price_piastres": 42000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58212",
+    "sold_at": "2026-11-08T09:30:03Z",
+    "channel": "app",
+    "email": "safwat.sakr@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 9,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Safwat Sakr",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58213",
+    "sold_at": "2026-11-08T17:45:03Z",
+    "channel": "app",
+    "email": "ayman.sakr@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 21,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ayman Sakr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58214",
+    "sold_at": "2026-11-08T18:14:00Z",
+    "channel": "app",
+    "email": "nourhan.elsayed@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 14,
+        "from": "LXR",
+        "to": "ASW",
+        "name": "Nourhan Elsayed",
+        "type": "adult",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58215",
+    "sold_at": "2026-11-08T19:02:38Z",
+    "channel": "web",
+    "email": "nawal.zahran@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 32,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Zahran",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58216",
+    "sold_at": "2026-11-08T19:16:28Z",
+    "channel": "app",
+    "email": "asmaa.soliman@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 29,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Asmaa Soliman",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58217",
+    "sold_at": "2026-11-08T20:50:03Z",
+    "channel": "app",
+    "email": "donia.shalaby@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 41,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Donia Shalaby",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58218",
+    "sold_at": "2026-11-08T21:27:09Z",
+    "channel": "web",
+    "email": "safwat.zahran@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 24,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Safwat Zahran",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58219",
+    "sold_at": "2026-11-08T22:01:17Z",
+    "channel": "web",
+    "email": "moataz.marei@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 9,
+        "from": "AST",
+        "to": "ASW",
+        "name": "Moataz Marei",
+        "type": "student",
+        "price_piastres": 42000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58220",
+    "sold_at": "2026-11-08T22:06:39Z",
+    "channel": "web",
+    "email": "shahd.elshazly@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 28,
+        "from": "CAI",
+        "to": "AST",
+        "name": "Shahd Elshazly",
+        "type": "adult",
+        "price_piastres": 42000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58221",
+    "sold_at": "2026-11-08T22:21:52Z",
+    "channel": "web",
+    "email": "moataz.marei@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 14,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Moataz Marei",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58222",
+    "sold_at": "2026-11-08T22:26:20Z",
+    "channel": "app",
+    "email": "walid.selim@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 4,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Walid Selim",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58223",
+    "sold_at": "2026-11-08T22:51:38Z",
+    "channel": "web",
+    "email": "hager.elshazly@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 26,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Hager Elshazly",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 2,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Safwat Soliman",
+        "type": "child",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58224",
+    "sold_at": "2026-11-08T23:20:34Z",
+    "channel": "web",
+    "email": "menna.sakr@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 35,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Menna Sakr",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 18,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Haneen Marei",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58225",
+    "sold_at": "2026-11-09T00:24:42Z",
+    "channel": "app",
+    "email": "adham.keshk@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 43,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Adham Keshk",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58226",
+    "sold_at": "2026-11-09T01:07:45Z",
+    "channel": "web",
+    "email": "donia.selim@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 7,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Donia Selim",
+        "type": "student",
+        "price_piastres": 69000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58227",
+    "sold_at": "2026-11-09T01:39:43Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 25,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Haneen Gabr",
+        "type": "adult",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58228",
+    "sold_at": "2026-11-09T04:51:48Z",
+    "channel": "web",
+    "email": "adham.metwally@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 33,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Adham Metwally",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58229",
+    "sold_at": "2026-11-09T06:13:14Z",
+    "channel": "app",
+    "email": "hager.elshazly@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 41,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Elshazly",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58230",
+    "sold_at": "2026-11-09T06:14:03Z",
+    "channel": "app",
+    "email": "hager.shalaby@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 3,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Shalaby",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 17,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Abeer Elshazly",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 4,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Abouzeid",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58231",
+    "sold_at": "2026-11-09T06:23:32Z",
+    "channel": "web",
+    "email": "menna.zahran@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 2,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Menna Zahran",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58232",
+    "sold_at": "2026-11-09T07:13:15Z",
+    "channel": "web",
+    "email": "walid.gabr@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 37,
+        "from": "CAI",
+        "to": "AST",
+        "name": "Walid Gabr",
+        "type": "adult",
+        "price_piastres": 42000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58233",
+    "sold_at": "2026-11-09T07:53:52Z",
+    "channel": "web",
+    "email": "malak.soliman@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 29,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Malak Soliman",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58234",
+    "sold_at": "2026-11-09T08:12:11Z",
+    "channel": "app",
+    "email": "ayman.metwally@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 24,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Ayman Metwally",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58235",
+    "sold_at": "2026-11-09T08:22:52Z",
+    "channel": "app",
+    "email": "shahd.keshk@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 40,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Keshk",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 32,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Moataz Elmasry",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 8,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Shahd Abouzeid",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58236",
+    "sold_at": "2026-11-09T09:05:00Z",
+    "channel": "app",
+    "email": "nawal.hassanein@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 13,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Nawal Hassanein",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 22,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Asmaa Metwally",
+        "type": "child",
+        "price_piastres": 36000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58237",
+    "sold_at": "2026-11-09T09:05:25Z",
+    "channel": "app",
+    "email": "ayman.nasr@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 12,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Ayman Nasr",
+        "type": "student",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58238",
+    "sold_at": "2026-11-09T10:15:36Z",
+    "channel": "app",
+    "email": "walid.elshazly@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 26,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Walid Elshazly",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58239",
+    "sold_at": "2026-11-09T11:49:07Z",
+    "channel": "app",
+    "email": "adham.shalaby@inbox.example",
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 5,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Adham Shalaby",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58240",
+    "sold_at": "2026-11-09T13:57:55Z",
+    "channel": "app",
+    "email": "abeer.elshazly@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 13,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Abeer Elshazly",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58241",
+    "sold_at": "2026-11-09T14:05:39Z",
+    "channel": "app",
+    "email": "ayman.keshk@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 21,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Ayman Keshk",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58242",
+    "sold_at": "2026-11-09T14:28:03Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 3,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Hager Soliman",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 1,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Asmaa Metwally",
+        "type": "child",
+        "price_piastres": 36000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58243",
+    "sold_at": "2026-11-09T14:35:24Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 16,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Abeer Nasr",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58244",
+    "sold_at": "2026-11-09T15:03:20Z",
+    "channel": "app",
+    "email": "nawal.abouzeid@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 38,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Abouzeid",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58245",
+    "sold_at": "2026-11-09T15:10:48Z",
+    "channel": "web",
+    "email": "menna.keshk@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 37,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Menna Keshk",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 9,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Ferial Gabr",
+        "type": "child",
+        "price_piastres": 32000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 35,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Abeer Elshazly",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58246",
+    "sold_at": "2026-11-09T15:57:25Z",
+    "channel": "app",
+    "email": "walid.elshazly@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 23,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Walid Elshazly",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58247",
+    "sold_at": "2026-11-09T16:06:50Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "SSH-2300",
+    "tickets": [
+      {
+        "seat": 43,
+        "from": "CAI",
+        "to": "SSH",
+        "name": "Adham Selim",
+        "type": "adult",
+        "price_piastres": 72000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58248",
+    "sold_at": "2026-11-09T16:35:35Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 20,
+        "from": "LXR",
+        "to": "ASW",
+        "name": "Ferial Marei",
+        "type": "student",
+        "price_piastres": 18000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58249",
+    "sold_at": "2026-11-09T16:57:53Z",
+    "channel": "web",
+    "email": "ferial.gabr@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 9,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Gabr",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58250",
+    "sold_at": "2026-11-09T17:42:51Z",
+    "channel": "app",
+    "email": "hager.marei@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 19,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Hager Marei",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58251",
+    "sold_at": "2026-11-09T18:27:44Z",
+    "channel": "app",
+    "email": "ferial.zahran@inbox.example",
+    "trip": "ALX-1500",
+    "tickets": [
+      {
+        "seat": 25,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Zahran",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 48,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Nawal Sakr",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58252",
+    "sold_at": "2026-11-09T18:39:08Z",
+    "channel": "app",
+    "email": "donia.zahran@inbox.example",
+    "trip": "ALX-1900",
+    "tickets": [
+      {
+        "seat": 17,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Donia Zahran",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58253",
+    "sold_at": "2026-11-09T18:40:49Z",
+    "channel": "web",
+    "email": "asmaa.soliman@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 34,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Asmaa Soliman",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58254",
+    "sold_at": "2026-11-09T19:06:20Z",
+    "channel": "web",
+    "email": "adham.selim@inbox.example",
+    "trip": "LXR-0800",
+    "tickets": [
+      {
+        "seat": 19,
+        "from": "HRG",
+        "to": "LXR",
+        "name": "Adham Selim",
+        "type": "student",
+        "price_piastres": 24000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58255",
+    "sold_at": "2026-11-09T19:16:42Z",
+    "channel": "app",
+    "email": "nawal.elshazly@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 1,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Nawal Elshazly",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58256",
+    "sold_at": "2026-11-09T19:37:19Z",
+    "channel": "app",
+    "email": "ferial.marei@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 23,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Ferial Marei",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 14,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Moataz Zahran",
+        "type": "child",
+        "price_piastres": 13000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 39,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Walid Elshazly",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      },
+      {
+        "seat": 11,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Donia Soliman",
+        "type": "adult",
+        "price_piastres": 26000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58257",
+    "sold_at": "2026-11-09T20:09:08Z",
+    "channel": "app",
+    "email": "shahd.zahran@inbox.example",
+    "trip": "ASW-0700",
+    "tickets": [
+      {
+        "seat": 8,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Shahd Zahran",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58258",
+    "sold_at": "2026-11-09T22:28:06Z",
+    "channel": "app",
+    "email": "safwat.keshk@inbox.example",
+    "trip": "HRG-0830",
+    "tickets": [
+      {
+        "seat": 31,
+        "from": "CAI",
+        "to": "HRG",
+        "name": "Safwat Keshk",
+        "type": "adult",
+        "price_piastres": 64000,
+        "status": "cancelled",
+        "cancelled_at": "2026-11-11T05:30:00Z",
+        "refund_piastres": 0
+      }
+    ]
+  },
+  {
+    "ref": "WL-58259",
+    "sold_at": "2026-11-09T22:39:10Z",
+    "channel": "app",
+    "email": "menna.selim@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 34,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Menna Selim",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58260",
+    "sold_at": "2026-11-09T23:08:42Z",
+    "channel": "counter",
+    "email": null,
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 5,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Hager Soliman",
+        "type": "adult",
+        "price_piastres": 92000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58261",
+    "sold_at": "2026-11-09T23:39:16Z",
+    "channel": "app",
+    "email": "safwat.nasr@inbox.example",
+    "trip": "ALX-0700",
+    "tickets": [
+      {
+        "seat": 43,
+        "from": "CAI",
+        "to": "ALX",
+        "name": "Safwat Nasr",
+        "type": "student",
+        "price_piastres": 19500,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58262",
+    "sold_at": "2026-11-11T08:52:00Z",
+    "channel": "app",
+    "email": "yasmin.hosny@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 22,
+        "from": "LXR",
+        "to": "ASW",
+        "name": "Yasmin Hosny",
+        "type": "student",
+        "price_piastres": 18000,
+        "status": "sold",
+        "cancelled_at": null,
+        "refund_piastres": null
+      }
+    ]
+  },
+  {
+    "ref": "WL-58263",
+    "sold_at": "2026-11-11T09:44:04Z",
+    "channel": "web",
+    "email": "malak.zahran@inbox.example",
+    "trip": "ASW-2200",
+    "tickets": [
+      {
+        "seat": 16,
+        "from": "CAI",
+        "to": "ASW",
+        "name": "Malak Zahran",
+        "type": "adult",
+        "price_piastres": 92000,
         "status": "sold",
         "cancelled_at": null,
         "refund_piastres": null

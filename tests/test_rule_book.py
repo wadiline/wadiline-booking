@@ -31,15 +31,17 @@ def test_rule_passage(file, sentence):
 
 
 def test_fare_table_matches(conn):
-    trip = db.get_trip(conn, "ALX-0700")
-    names = {stop.stop.code: stop.stop.name for stop in trip.stops}
+    routes = [("ALEX", "ALX-0700"), ("HURG", "HRG-0830"), ("SINAI", "SSH-2300"),
+              ("REDSEA", "LXR-0800"), ("UPPER", "ASW-0700")]
     table = (RULES / "fares.md").read_text(encoding="utf-8")
-    actual = [line for line in table.splitlines() if line.startswith("| ") and line.endswith(" EGP |")]
-    expected = [
-        f"| {names[start]} | {names[end]} | {amount // 100} EGP |"
-        for (start, end), amount in db.fare_table(conn, "ALEX").items()
-    ]
-    assert actual == expected
+    actual_rows = [line for line in table.splitlines() if line.startswith("| ") and line.endswith(" EGP |")]
+    expected = []
+    for route, trip_code in routes:
+        trip = db.get_trip(conn, trip_code)
+        names = {s.stop.code: s.stop.name for s in trip.stops}
+        for (start, end), amount in db.fare_table(conn, route).items():
+            expected.append(f"| {names[start]} | {names[end]} | {amount // 100} EGP |")
+    assert len(expected) == 10 and set(actual_rows) == set(expected)
 
 
 @pytest.mark.parametrize(("module", "constant", "file", "spoken"), [

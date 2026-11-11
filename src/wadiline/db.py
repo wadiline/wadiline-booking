@@ -27,7 +27,8 @@ from wadiline.models import (
 from wadiline.refunds import RefundShare, refund_piastres, refund_share
 
 SAMPLE_DIR = Path(__file__).resolve().parents[2] / "data" / "sample"
-SERVICE_DATE = "2024-09-15"
+SNAPSHOT = "2026-11-11T10:00:00Z"
+SERVICE_DATE = "2026-11-11"
 
 
 def db_path() -> Path:
@@ -151,7 +152,7 @@ def seed(conn, data_dir=SAMPLE_DIR, *, force=False) -> dict[str, int]:
         conn.executemany("INSERT INTO fares VALUES (:route, :from, :to, :adult_piastres)", data["fares"])
         import_trips(conn, data["trips"])
         conn.executemany("INSERT INTO meta VALUES (?, ?)", (
-            ("as_of", "2024-09-15T09:00:00Z"), ("service_date", SERVICE_DATE), ("sample_version", "1")))
+            ("as_of", SNAPSHOT), ("service_date", SERVICE_DATE), ("sample_version", "2")))
         trips = {trip.code: trip for trip in list_trips(conn)}
         count = 0
         for row in data["bookings"]:

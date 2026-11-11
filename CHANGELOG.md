@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Sample data for 11 November (BK-57).
 - Seat holds starter (BK-59).
 - Personal tests folder (BK-56).
 

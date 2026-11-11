@@ -51,17 +51,17 @@ def test_migration(tmp_path, case):
 
 @pytest.mark.parametrize("case", ["counts", "refusal", "force", "failed-replacement"])
 def test_seed(tmp_path, conn, case):
-    expected = {"stops": 2, "routes": 1, "trips": 2, "bookings": 1, "tickets": 1}
+    expected = {"stops": 7, "routes": 5, "trips": 8, "bookings": 263, "tickets": 313}
     if case == "refusal":
         with pytest.raises(SeedError, match="Use --force"):
             db.seed(conn)
     elif case == "force":
-        trip = db.get_trip(conn, "ALX-0700")
-        leg = trip.leg("CAI", "ALX")
+        trip = db.get_trip(conn, "ASW-0700")
+        leg = trip.leg("LXR", "ASW")
         with conn:
             conn.execute("INSERT INTO holds VALUES (1, ?, 45, ?, ?, 'app', ?, ?, NULL)",
-                         (trip.id, leg.board, leg.alight, "2024-09-15T09:00:00Z",
-                          "2024-09-15T09:10:00Z"))
+                         (trip.id, leg.board, leg.alight, "2026-11-11T10:00:00Z",
+                          "2026-11-11T10:10:00Z"))
         assert db.seed(conn, force=True) == expected
         assert conn.execute("SELECT count(*) FROM holds").fetchone()[0] == 0
         assert conn.execute("SELECT count(*) FROM tickets").fetchone()[0] == expected["tickets"]
@@ -69,67 +69,95 @@ def test_seed(tmp_path, conn, case):
         folder = tmp_path / "bad"
         shutil.copytree(db.SAMPLE_DIR, folder)
         rows = json.loads((folder / "bookings.json").read_bytes())
-        rows.append(rows[0].copy())
+        rows[-1]["ref"] = rows[0]["ref"]
         (folder / "bookings.json").write_text(json.dumps(rows), encoding="utf-8")
         with pytest.raises(sqlite3.IntegrityError):
             db.seed(conn, folder, force=True)
-        ref = "WL-58001"
+        ref = "WL-58263"
         assert db.get_booking(conn, ref).ref == ref
         assert conn.execute("SELECT count(*) FROM tickets").fetchone()[0] == expected["tickets"]
     else:
         with closing(db.connect(tmp_path / "new.db")) as empty:
             assert db.seed(empty) == expected
-            assert db.meta(empty, "as_of") == "2024-09-15T09:00:00Z"
-            assert db.meta(empty, "service_date") == "2024-09-15"
-            assert db.meta(empty, "sample_version") == "1"
+            assert db.meta(empty, "as_of") == "2026-11-11T10:00:00Z"
+            assert db.meta(empty, "service_date") == "2026-11-11"
+            assert db.meta(empty, "sample_version") == "2"
 
 
 @pytest.mark.parametrize("case", ["default", "explicit", "missing", "order", "forward", "reverse"])
 def test_trips(conn, case):
-    code = "ALX-0700"
+    code = "ASW-0700"
     if case == "default":
-        assert db.get_trip(conn, code).service_date == date(2024, 9, 15)
+        assert db.get_trip(conn, code).service_date == date(2026, 11, 11)
     elif case == "explicit":
-        assert db.get_trip(conn, code, date(2024, 9, 15)).id == 1
-        assert not db.list_trips(conn, service_date=date(2024, 9, 16))
+        assert db.get_trip(conn, code, date(2026, 11, 11)).id == 7
+        assert not db.list_trips(conn, service_date=date(2026, 11, 12))
     elif case == "missing":
         with pytest.raises(TripNotFound):
-            db.get_trip(conn, code, date(2024, 9, 16))
+            db.get_trip(conn, code, date(2026, 11, 12))
     elif case == "order":
-        assert [t.code for t in db.list_trips(conn)] == ["ALX-0700", "ALX-1500"]
+        order = [
+            "ALX-0700", "ASW-0700", "LXR-0800", "HRG-0830",
+            "ALX-1500", "ALX-1900", "ASW-2200", "SSH-2300"]
+        assert [t.code for t in db.list_trips(conn)] == order
     elif case == "forward":
-        assert [t.code for t in db.list_trips(conn, "cai", "aLeXaNdRiA")] == ["ALX-0700", "ALX-1500"]
+        assert [t.code for t in db.list_trips(conn, "cai", "lUxOr")] == ["ASW-0700", "ASW-2200"]
     else:
-        assert db.list_trips(conn, "Alexandria", "Cairo") == []
+        assert db.list_trips(conn, "Luxor", "Cairo") == []
+
+
+@pytest.mark.parametrize("case", ["live-order", "seat-filter", "booking-total", "fares"])
+def test_reads(conn, case):
+    trip = db.get_trip(conn, "ASW-2200")
+    if case == "live-order":
+        tickets = db.live_tickets(conn, trip)
+        pairs = [(t.seat, t.id) for t in tickets]
+        assert len(pairs) == 54 and pairs == sorted(pairs)
+        assert all(t.status == "sold" for t in tickets)
+    elif case == "seat-filter":
+        assert [t.booking_ref for t in db.live_tickets(conn, trip, 14)] == ["WL-58214"]
+    elif case == "booking-total":
+        assert db.get_booking(conn, "WL-58214").total_piastres == 24000
+    else:
+        assert db.fare_table(conn, "UPPER") == {
+            ("CAI", "AST"): 42000, ("CAI", "LXR"): 78000, ("CAI", "ASW"): 92000,
+            ("AST", "LXR"): 38000, ("AST", "ASW"): 56000, ("LXR", "ASW"): 24000}
 
 
 @pytest.mark.parametrize("case", ["reference", "priced-row", "caller-rollback"])
 def test_create(conn, clock, case):
-    trip = db.get_trip(conn, "ALX-1500")
-    leg = trip.leg("CAI", "ALX")
+    trip = db.get_trip(conn, "ASW-0700")
+    leg = trip.leg("LXR", "ASW")
     with conn:
-        record = db.create_booking(conn, trip, 44, leg, "Adham Gabr", PassengerType.ADULT, "counter", None, clock.now())
+        record = db.create_booking(conn, trip, 44, leg, "Adham Gabr", PassengerType.STUDENT, "counter", None, clock.now())
         if case == "caller-rollback":
             conn.rollback()
     if case == "reference":
-        assert record.ref == "WL-58002"
+        assert record.ref == "WL-58264"
     elif case == "priced-row":
         saved = db.get_booking(conn, record.ref)
-        assert saved.sold_at == clock.now() and saved.tickets[0].price_piastres == 26000
+        assert saved.sold_at == clock.now() and saved.tickets[0].price_piastres == 18000
         assert saved.tickets[0].leg == leg
     else:
         with pytest.raises(BookingNotFound):
             db.get_booking(conn, record.ref)
 
 
-@pytest.mark.parametrize("case", ["already-cancelled", "missing"])
+@pytest.mark.parametrize("case", ["group", "already-cancelled", "missing"])
 def test_cancel(conn, clock, case):
     if case == "missing":
         with pytest.raises(BookingNotFound), conn:
             db.cancel_booking(conn, "WL-99999", clock.now())
         return
+    ref = conn.execute("SELECT booking_ref FROM tickets GROUP BY booking_ref HAVING count(*) = 4").fetchone()[0]
+    original = db.get_booking(conn, ref)
     with conn:
-        share, value = db.cancel_booking(conn, "WL-58001", clock.now() - timedelta(days=2))
-    assert (share, value) == (RefundShare.FULL, 26000)
-    with pytest.raises(AlreadyCancelled), conn:
-        db.cancel_booking(conn, "WL-58001", clock.now())
+        share, value = db.cancel_booking(conn, ref, clock.now() - timedelta(days=2))
+    if case == "group":
+        assert share is RefundShare.FULL and value == original.total_piastres
+        cancelled = db.get_booking(conn, ref)
+        assert cancelled.total_piastres == 0
+        assert all(t.status == "cancelled" and t.refund_piastres == t.price_piastres for t in cancelled.tickets)
+    else:
+        with pytest.raises(AlreadyCancelled), conn:
+            db.cancel_booking(conn, ref, clock.now())

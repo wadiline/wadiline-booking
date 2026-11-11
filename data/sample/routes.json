@@ -5,5 +5,35 @@
       "CAI",
       "ALX"
     ]
+  },
+  {
+    "code": "HURG",
+    "stops": [
+      "CAI",
+      "HRG"
+    ]
+  },
+  {
+    "code": "SINAI",
+    "stops": [
+      "CAI",
+      "SSH"
+    ]
+  },
+  {
+    "code": "REDSEA",
+    "stops": [
+      "HRG",
+      "LXR"
+    ]
+  },
+  {
+    "code": "UPPER",
+    "stops": [
+      "CAI",
+      "AST",
+      "LXR",
+      "ASW"
+    ]
   }
 ]

@@ -17,27 +17,27 @@ case. If you omit `date`, the service uses the sample service date. Errors have 
 A counter booking takes a body of this shape.
 
 ```json
-{"seat": 14, "from": "Cairo", "to": "Alexandria", "passenger": {"name": "Adham Gabr", "type": "adult"}, "email": null}
+{"seat": 14, "from": "Cairo", "to": "Aswan", "passenger": {"name": "Adham Gabr", "type": "adult"}, "email": null}
 ```
 
 The service checks availability and saves the sale in one transaction. If the seat is
 already sold on part of the leg, it returns a 409 with a message such as
-`Seat 14 is taken for part of Cairo to Alexandria.` A cancellation uses the current clock
+`Seat 14 is taken for part of Cairo to Aswan.` A cancellation uses the current clock
 time and each ticket's timetabled departure.
 
 ## Holds (BK-63, not built yet)
 
-Send `POST /trips/{trip_code}/holds`. For example, send this body for ALX-1500.
+Send `POST /trips/{trip_code}/holds`. For example, send this body for ASW-0700.
 
 ```json
-{"seat": 45, "from": "Cairo", "to": "Alexandria", "holder": "app-7f3a"}
+{"seat": 45, "from": "Luxor", "to": "Aswan", "holder": "app-7f3a"}
 ```
 
 A new hold returns 201. It takes the next ID SQLite assigns, so the first hold in an
 empty table is `H-000001`.
 
 ```json
-{"hold_id": "H-000001", "trip": "ALX-1500", "date": "2024-09-15", "seat": 45, "from": "Cairo", "to": "Alexandria", "expires_at": "2024-09-15T12:10:00+03:00"}
+{"hold_id": "H-000001", "trip": "ASW-0700", "date": "2026-11-11", "seat": 45, "from": "Luxor", "to": "Aswan", "expires_at": "2026-11-11T12:10:00+02:00"}
 ```
 
 The same holder, seat and leg return 200 and the same body while the hold is active.
@@ -53,4 +53,4 @@ A hold ID in any other form is unknown: 404 `hold_not_found`.
 The seat map gains `"held": [...]` for seats with an active hold sharing road and no
 such sold ticket. Each seat appears in exactly one of `free`, `taken` and `held`.
 A counter sale gets 409 `seat_held` while that hold shares road, for example
-`Seat 45 is held for part of Cairo to Alexandria.`
+`Seat 45 is held for part of Luxor to Aswan.`

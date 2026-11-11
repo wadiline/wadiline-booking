@@ -16,3 +16,7 @@ commands show times in Cairo and money in EGP.
 | `holds` | Seat-hold records for BK-63 |
 
 Rules that need the time receive `now` from their caller. They never read the clock.
+The night bus numbers its stops Cairo 0, Assiut 1, Luxor 2 and Aswan 3. A seat becomes
+available again at the stop where its passenger gets off.
+
+The next checkout work starts with seat holds (BK-63). Payments follow.

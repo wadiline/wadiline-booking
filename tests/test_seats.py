@@ -9,9 +9,9 @@ from wadiline.seats import seat_free, seat_map
 
 @pytest.fixture
 def trip():
-    start = datetime(2024, 2, 18, 1, tzinfo=UTC)
+    start = datetime(2026, 11, 11, 1, tzinfo=UTC)
     stops = [Stop("CAI", "Cairo"), Stop("AST", "Assiut"), Stop("LXR", "Luxor"), Stop("ASW", "Aswan")]
-    return Trip(1, "TST-0100", date(2024, 2, 18), "UPPER", 49, tuple(
+    return Trip(1, "TST-0100", date(2026, 11, 11), "UPPER", 49, tuple(
         TripStop(i, stop, start + timedelta(hours=i)) for i, stop in enumerate(stops)))
 
 
